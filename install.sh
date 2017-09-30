@@ -20,8 +20,8 @@ cp .gitconfig ~/.gitconfig
 git config --global user.name "$name"
 git config --global user.email "$email"
 
-cp git-completion.bash ~/.git-completion.bash
-cp git-prompt.sh ~/.git-prompt.sh
+cp git-completion.bash ~/git-completion.bash
+cp git-prompt.sh ~/git-prompt.sh
 
 source ~/.profile
 
