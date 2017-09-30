@@ -13,6 +13,7 @@ brew install vim --with-override-system-vi
 brew install tmux
 brew install ag
 brew install ctags
+brew install typespeed
 
 echo Please input git user name
 read name
