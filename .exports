@@ -1,0 +1,36 @@
+export GIT_SSL_NO_VERIFY=true
+export PATH=./node_modules/.bin:$PATH
+export PATH=~/node_modules/.bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=~/bin:$PATH
+
+export NODE_PATH=./node_modules:$NODE_PATH
+
+export LANG=ru_RU.UTF-8
+export PS1='\[\033[45m\]\[\033[37m\] \w \[\033[35m\]\[\033[40m\]\[\033[37m\]$(__git_ps1 " %s ")\[\033[0m\]\[\033[30m\]\[\033[0m\] '
+PROMPT_TITLE='echo -ne "\033]0;${PWD/#$HOME/~}/$(__git_ps1 "%s/")\007"'
+export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE};"
+
+export LC_ALL=ru_RU.UTF-8
+export BLOCKSIZE=K      # FreeBSD only
+export EDITOR=vim
+export PAGER=less
+export CLICOLOR=yes; # git colors
+export TERM=screen-256color
+
+# http://habrahabr.ru/post/153871/
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[42;30m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[32m'
+export LESS_TERMCAP_ue=$'\E[0m'
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
+# fix sorting against underscores
+export LC_COLLATE=C
