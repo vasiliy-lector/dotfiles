@@ -11,6 +11,8 @@ brew install wget
 brew install cmake
 brew install vim --with-override-system-vi
 brew install tmux
+brew install ag
+brew install ctags
 
 echo Please input git user name
 read name
