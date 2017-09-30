@@ -14,6 +14,7 @@ brew install tmux
 brew install ag
 brew install ctags
 brew install typespeed
+brew install reattach-to-user-namespace
 
 echo Please input git user name
 read name
