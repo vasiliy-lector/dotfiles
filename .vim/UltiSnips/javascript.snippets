@@ -16,12 +16,6 @@ class $1 extends $2{
 }
 endsnippet
 
-snippet cr
-class $1 extends Component {
-    $2
-}
-endsnippet
-
 snippet f
 // @flow
 
@@ -32,22 +26,8 @@ snippet nf
 
 endsnippet
 
-snippet CR
-class $1 extends Component {
-    componentWillMount() {
-        $2
-    }
-
-    render() {
-        $3
-    }
-}
-
-export default $1;
-endsnippet
-
 snippet storybook
-// eslint-disable-next-line flowtype/require-valid-file-annotation
+// @flow
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { $1 } from './$1';
@@ -57,161 +37,23 @@ storiesOf('$1', module)
 endsnippet
 
 snippet test
-// eslint-disable-next-line flowtype/require-valid-file-annotation
+// @flow
 import React from 'react';
 import { $1 } from './$1';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('$1', () => {
     it('должен рендериться', () => {
         const wrapper = mount(<$1/>);
-        expect(wrapper.find($1)).toBeDefined();
+        expect(wrapper.getNode()).toBeDefined();
     });
 });
-endsnippet
-
-snippet ct
-static contextTypes = {
-    $1
-};
-endsnippet
-
-snippet pt
-static propTypes = {
-    $1
-};
-endsnippet
-
-snippet dp
-static defaultProps = {
-    $1
-};
-endsnippet
-
-snippet exA
-executeAction: pt.func.isRequired
-endsnippet
-
-snippet geS
-getStore: pt.func.isRequired
-endsnippet
-
-snippet m
-$1($2) {
-    $3
-}
-endsnippet
-
-snippet m=>
-$1 = ($2) => {
-    $3
-};
 endsnippet
 
 snippet =>
 $1 => {
     $2
 }
-endsnippet
-
-snippet b
-{
-    $2
-}
-endsnippet
-
-snippet if
-if ($1) {
-    $2
-}
-endsnippet
-
-snippet else
-else {
-    $1
-}
-endsnippet
-
-snippet switch
-switch ($1) {
-    $2
-}
-endsnippet
-
-snippet case
-case $1:
-    $2
-    break;
-endsnippet
-
-snippet caser
-case $1:
-    return $2;
-endsnippet
-
-snippet default
-default:
-    $1
-    break;
-endsnippet
-
-snippet defaultr
-default:
-    return $1;
-endsnippet
-
-snippet cWM
-componentWillMount() {
-    $1
-}
-endsnippet
-
-snippet cDM
-componentDidMount() {
-    $1
-}
-endsnippet
-
-snippet cWRP
-componentWillReceiveProps(nextProps) {
-    $1
-}
-endsnippet
-
-snippet sCU
-shouldComponentUpdate() {
-    $1
-}
-endsnippet
-
-snippet cWU
-componentWillUpdate(nextProps, nextState) {
-    $1
-}
-endsnippet
-
-snippet cDU
-componentDidUpdate() {
-    $1
-}
-endsnippet
-
-snippet cWUm
-componentWillUnmount() {
-    $1
-}
-endsnippet
-
-snippet gSS
-getStoresState() {
-    $1
-}
-endsnippet
-
-snippet sS
-this.setState({
-    $1
-});
 endsnippet
 
 snippet todo
@@ -242,6 +84,11 @@ snippet T/
 />
 endsnippet
 
-snippet d
-debugger;
+snippet console
+// eslint-disable-next-line no-console
+console.log($1);
+endsnippet
+
+snippet iin
+/* istanbul ignore next */
 endsnippet
