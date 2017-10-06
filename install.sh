@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd "$(dirname "$0")"
-for f in `find . -name '\.*' -exec basename {} \; | grep -v 'git\|\.$'`
+for f in `ls -d \.* | grep -v git`
 do
     ln -fs $PWD/$f ~
 done
