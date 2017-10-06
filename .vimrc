@@ -176,12 +176,6 @@ augroup vimrc
 
   autocmd BufReadPost fugitive://* set bufhidden=delete
 
-  " NeoComplete, Neosnippet
-  " Auto close preview window
-  " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-  " autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-  " autocmd InsertLeave * NeoSnippetClearMarkers
-
 augroup END
 
 " set t_Co=256
@@ -229,58 +223,6 @@ let g:NERDTreeWinSize=47
 let delimitMate_matchpairs = '(:),[:],{:}'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
-
-" Neocomplete
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-
-if has('lua')
-
-  " Define keyword.
-  if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-  endif
-  let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-  " Plugin key-mappings.
-  inoremap <expr><C-g>     neocomplete#undo_completion()
-  inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><C-y>  neocomplete#close_popup()
-  inoremap <expr><C-e>  neocomplete#cancel_popup()
-
-else
-
-  " Define keyword.
-  if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-  endif
-  let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-  " Plugin key-mappings.
-  inoremap <expr><C-g>     neocomplcache#undo_completion()
-  inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-  inoremap <expr><C-y>  neocomplcache#close_popup()
-  inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-endif
-
-" " Syntastic
-" " set statusline+=%#warningmsg#
-" " set statusline+=%{SyntasticStatuslineFlag()}
-" " set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" " let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_css_checkers = ['stylelint']
 
 let g:airline_theme='base16'
 " air-line
