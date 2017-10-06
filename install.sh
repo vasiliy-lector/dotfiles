@@ -11,10 +11,14 @@ brew install wget
 brew install cmake
 brew install vim --with-override-system-vi
 brew install tmux
+brew install reattach-to-user-namespace
 brew install ag
 brew install ctags
 brew install typespeed
-brew install reattach-to-user-namespace
+brew install git
+brew install node
+
+npm install -g typescript
 
 echo Please input git user name
 read name
