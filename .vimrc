@@ -80,7 +80,7 @@ set softtabstop=4           " tab like 4 spaces
 set shiftround              " drop unused spaces
 " let g:html_indent_inctags = "html,body,head,tbody"
 
-" add ./src to path
+" add ./src to path for case of absolute paths
 let curPath = getcwd()
 exec "set path+=".curPath."/src"
 
