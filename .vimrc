@@ -80,6 +80,10 @@ set softtabstop=4           " tab like 4 spaces
 set shiftround              " drop unused spaces
 " let g:html_indent_inctags = "html,body,head,tbody"
 
+" add ./src to path
+let curPath = getcwd()
+exec "set path+=".curPath."/src"
+
 function! DelTagOfFile(file)
   let fullpath = a:file
   let cwd = getcwd()
