@@ -347,8 +347,8 @@ nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
 " nnoremap <silent> <leader>S :setlocal spell spelllang=ru_ru,en_us<cr>
 
-nnoremap <silent> <leader>s :let g:syntastic_auto_jump = 1<cr>:let g:syntastic_quiet_messages={'level':'warnings'}<cr>:SyntasticCheck<cr>:let g:syntastic_auto_jump = 0<cr>:let g:syntastic_quiet_messages={}<cr>
-nnoremap <silent> <leader>S :SyntasticCheck<cr>
+nnoremap <silent> <leader>s :FlowJumpToDef<cr>
+nnoremap <silent> <leader>S :FlowType<cr>
 
 nmap <silent> <leader><space> :NERDTreeFind<CR>
 nmap <silent> <leader>c :NERDTreeClose<CR>

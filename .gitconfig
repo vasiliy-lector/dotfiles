@@ -1,16 +1,10 @@
-; [http]
-;     sslVerify = false
-;     proxy = http://192.168.0.1:8080
-;
-; [https]
-;     proxy = http://192.168.0.1:8080
-
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol,space-before-tab
 
 [merge]
     tool = vimdiff
     log = true
+    conflictstyle = diff3
 
 [branch]
     autosetuprebase = always
@@ -21,7 +15,6 @@
 [color]
     diff = yes
     ui = auto
-    # ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -54,11 +47,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     hist = log --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]' --graph --date=short --branches --all
-    # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
-
-; [diff]
-;     noprefix = true
 
 [tag]
     sort = version:refname
