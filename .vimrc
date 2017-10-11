@@ -301,7 +301,7 @@ let g:used_javascript_libs = 'react,jasmine'
 nnoremap <silent> <leader>t :tabnew<cr>
 nnoremap <silent> <leader>x :close<cr>
 nnoremap <silent> <leader>q :tabclose<cr>
-nnoremap <silent> <leader>w :w<cr>
+nnoremap <silent> <leader>w :Gwrite<cr>
 " reload if changed
 nnoremap <leader>f mM:Ag<space>
 nnoremap <leader>u :UndotreeToggle<cr>
@@ -320,6 +320,10 @@ nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer
 nnoremap <silent> <leader>O :Mru<cr>
 nnoremap <silent> <leader>l :ll<cr>
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
+nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
+nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
+nnoremap <silent> <leader>r :GitGutterRevertHunk<cr>
+nnoremap <silent> <leader>i :GitGutterStageHunk<cr>
 nnoremap <leader>b :let g:gitgutter_diff_base = 'origin/develop'
 nnoremap <silent> g1 1gt
 nnoremap <silent> g2 2gt
