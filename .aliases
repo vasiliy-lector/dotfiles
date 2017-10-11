@@ -79,9 +79,12 @@ vimd() {
 vims() {
     vim -p `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
-vimpr() {
-    vim -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+vimprt() {
+    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vimprv() {
-    vim -O `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -O `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
+vimpr() {
+    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }

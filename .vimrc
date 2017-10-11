@@ -268,58 +268,34 @@ let g:xml_syntax_folding = 0
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:used_javascript_libs = 'react,jasmine'
 
-" Neosnippet
-" " Plugin key-mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-" " SuperTab like snippets behavior.
-" imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: pumvisible() ? "\<C-n>" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)"
-" \: "\<TAB>"
-"
-" " For snippet_complete marker.
-" if has('conceal')
-"   set conceallevel=2 concealcursor=i
-" endif
-"
-" let g:neosnippet#disable_runtime_snippets = {
-"       \   '_' : 1,
-"       \ }
-"
-" " Enable snipMate compatibility feature.
-" let g:neosnippet#enable_snipmate_compatibility = 1
-"
-" " Tell Neosnippet about the other snippets
-" let g:neosnippet#snippets_directory='~/.vim/snippets'
-
 " custom mapping
 nnoremap <C-w>c :tabclose<cr>
 nnoremap <C-w>t :tabnew<cr>
 nnoremap <silent> <leader>w :Gwrite<cr>
 nnoremap <leader>f mM:Ag<space>
-nnoremap <leader>u :UndotreeToggle<cr>
-nnoremap <leader>U :Gitv<cr>
+nnoremap <leader>h :UndotreeToggle<cr>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
+nmap <silent> <leader><space> :NERDTreeFind<CR>
+nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
+
+" fugitive
+nmap <silent> <leader>a :.Gblame<cr>
+nmap <silent> <leader>b :Gblame<cr>
+nnoremap <leader>g :Gitv<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
 nnoremap <silent> <leader>s :Gstatus<cr>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
 nnoremap <silent> <leader>> :diffget<cr>
 nnoremap <silent> <leader>< :diffput<cr>
 nnoremap <silent> <leader>2 :diffget //2<cr>
 nnoremap <silent> <leader>3 :diffget //3<cr>
-nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " :current open
-nnoremap <silent> <leader>O :Mru<cr> " :browse oldfiles
 nnoremap <silent> <leader>l :ll<cr>
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
-nnoremap <silent> <leader>r :GitGutterRevertHunk<cr>
+nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
 nnoremap <silent> <leader>i :GitGutterStageHunk<cr>
-nnoremap <leader>b :let g:gitgutter_diff_base = 'origin/develop'
+nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " :current open
+nnoremap <silent> <leader>O :Mru<cr> " :browse oldfiles
 nnoremap <silent> g1 1gt
 nnoremap <silent> g2 2gt
 nnoremap <silent> g3 3gt
@@ -331,20 +307,10 @@ nnoremap <silent> g7 7gt
 nnoremap <silent> g8 8gt
 nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
-
-autocmd FileType javascript nnoremap <silent> <leader>g :FlowJumpToDef<cr>
+autocmd FileType javascript nnoremap <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <silent> <leader>t :FlowType<cr>
-autocmd FileType typescript nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<cr>
+autocmd FileType typescript nnoremap <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <silent> <leader>t :YcmCompleter GetType<cr>
-
-nmap <silent> <leader><space> :NERDTreeFind<CR>
-nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
-" nmap <silent> <leader><space> :NERDTreeTabsOpen<cr>:NERDTreeTabsFind<cr>
-" nmap <silent> <leader>c :NERDTreeTabsToggle<cr>
-
-" fugitive
-nmap <silent> <leader>a :.Gblame<cr>
-nmap <silent> <leader>A :Gblame<cr>
 
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
@@ -358,10 +324,6 @@ endfunction
 function! s:SetSearch()
     let @/ = '\V' . substitute(escape(@+, '/\'), '\n', '\\n', 'g')
 endfunction
-
-" let g:nerdtree_tabs_open_on_console_startup=1
-" let g:nerdtree_tabs_smart_startup_focus=2
-" let g:nerdtree_tabs_autofind=1
 
 "CtrlP
 if executable('ag')
