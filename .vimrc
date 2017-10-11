@@ -298,6 +298,7 @@ nnoremap <silent> <leader>a :GitGutterStageHunk<cr> " add hunk to index
 " working with tabs
 nnoremap <silent> gq :tabclose<cr>
 nnoremap <silent> gn :tabnew<cr>
+nnoremap <silent> go :tabonly<cr> " close other tabs
 nnoremap <silent> g1 1gt
 nnoremap <silent> g2 2gt
 nnoremap <silent> g3 3gt
