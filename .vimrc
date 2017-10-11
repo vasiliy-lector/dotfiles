@@ -308,17 +308,16 @@ nnoremap <leader>u :UndotreeToggle<cr>
 nnoremap <leader>G :Gitv<cr>
 " git diff
 nnoremap <silent> <leader>g :Gdiff<cr>
+nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-" nnoremap <silent> <leader>> :diffget<cr>
-" nnoremap <silent> <leader>< :diffput<cr>
+nnoremap <silent> <leader>> :diffget<cr>
+nnoremap <silent> <leader>< :diffput<cr>
 nnoremap <silent> <leader>2 :diffget //2<cr>
 nnoremap <silent> <leader>3 :diffget //3<cr>
 " :current open
 nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
 " :browse oldfiles
 nnoremap <silent> <leader>O :Mru<cr>
-nnoremap <silent> <leader>d :YcmCompleter GoToDefinition<cr>
-nnoremap <silent> <leader>D :YcmCompleter GetType<cr>
 nnoremap <silent> <leader>l :tabmove +1<cr>
 nnoremap <silent> <leader>h :tabmove -1<cr>
 nnoremap <silent> <leader>n :lnext<cr>
@@ -341,8 +340,10 @@ nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
 " nnoremap <silent> <leader>S :setlocal spell spelllang=ru_ru,en_us<cr>
 
-nnoremap <silent> <leader>s :FlowJumpToDef<cr>
-nnoremap <silent> <leader>S :FlowType<cr>
+autocmd FileType javascript nnoremap <silent> <leader>d :FlowJumpToDef<cr>
+autocmd FileType javascript nnoremap <silent> <leader>D :FlowType<cr>
+autocmd FileType typescript nnoremap <silent> <leader>d :YcmCompleter GoToDefinition<cr>
+autocmd FileType typescript nnoremap <silent> <leader>D :YcmCompleter GetType<cr>
 
 nmap <silent> <leader><space> :NERDTreeFind<CR>
 nmap <silent> <leader>c :NERDTreeClose<CR>
