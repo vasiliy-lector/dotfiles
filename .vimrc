@@ -254,7 +254,7 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_diff_args = '-w'
 let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
-let g:gitgutter_updatetime = 250
+set updatetime=250
 set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_sign_added = ' '
@@ -298,26 +298,21 @@ let g:used_javascript_libs = 'react,jasmine'
 " let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 " custom mapping
-nnoremap <silent> <leader>t :tabnew<cr>
-nnoremap <silent> <leader>x :close<cr>
-nnoremap <silent> <leader>q :tabclose<cr>
+nnoremap <C-w>c :tabclose<cr>
+nnoremap <C-w>t :tabnew<cr>
 nnoremap <silent> <leader>w :Gwrite<cr>
-" reload if changed
 nnoremap <leader>f mM:Ag<space>
 nnoremap <leader>u :UndotreeToggle<cr>
 nnoremap <leader>U :Gitv<cr>
-" git diff
-nnoremap <silent> <leader>g :Gdiff<cr>
+nnoremap <silent> <leader>d :Gdiff<cr>
 nnoremap <silent> <leader>s :Gstatus<cr>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
 nnoremap <silent> <leader>> :diffget<cr>
 nnoremap <silent> <leader>< :diffput<cr>
 nnoremap <silent> <leader>2 :diffget //2<cr>
 nnoremap <silent> <leader>3 :diffget //3<cr>
-" :current open
-nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
-" :browse oldfiles
-nnoremap <silent> <leader>O :Mru<cr>
+nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " :current open
+nnoremap <silent> <leader>O :Mru<cr> " :browse oldfiles
 nnoremap <silent> <leader>l :ll<cr>
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
@@ -336,15 +331,14 @@ nnoremap <silent> g7 7gt
 nnoremap <silent> g8 8gt
 nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
-" nnoremap <silent> <leader>S :setlocal spell spelllang=ru_ru,en_us<cr>
 
-autocmd FileType javascript nnoremap <silent> <leader>d :FlowJumpToDef<cr>
-autocmd FileType javascript nnoremap <silent> <leader>D :FlowType<cr>
-autocmd FileType typescript nnoremap <silent> <leader>d :YcmCompleter GoToDefinition<cr>
-autocmd FileType typescript nnoremap <silent> <leader>D :YcmCompleter GetType<cr>
+autocmd FileType javascript nnoremap <silent> <leader>g :FlowJumpToDef<cr>
+autocmd FileType javascript nnoremap <silent> <leader>t :FlowType<cr>
+autocmd FileType typescript nnoremap <silent> <leader>g :YcmCompleter GoToDefinition<cr>
+autocmd FileType typescript nnoremap <silent> <leader>t :YcmCompleter GetType<cr>
 
 nmap <silent> <leader><space> :NERDTreeFind<CR>
-nmap <silent> <leader>c :NERDTreeClose<CR>
+nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
 " nmap <silent> <leader><space> :NERDTreeTabsOpen<cr>:NERDTreeTabsFind<cr>
 " nmap <silent> <leader>c :NERDTreeTabsToggle<cr>
 
