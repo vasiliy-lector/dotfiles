@@ -311,10 +311,10 @@ nnoremap <silent> g8 8gt
 nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
 " mappings for flow and typescript
-autocmd FileType javascript nnoremap <silent> <leader>j :FlowJumpToDef<cr>
-autocmd FileType javascript nnoremap <silent> <leader>t :FlowType<cr>
-autocmd FileType typescript nnoremap <silent> <leader>j :YcmCompleter GoToDefinition<cr>
-autocmd FileType typescript nnoremap <silent> <leader>t :YcmCompleter GetType<cr>
+autocmd FileType javascript nnoremap <buffer> <silent> <leader>j :FlowJumpToDef<cr>
+autocmd FileType javascript nnoremap <buffer> <silent> <leader>t :FlowType<cr>
+autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
+autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
