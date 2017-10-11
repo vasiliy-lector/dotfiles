@@ -305,7 +305,7 @@ nnoremap <silent> <leader>w :w<cr>
 " reload if changed
 nnoremap <leader>f mM:Ag<space>
 nnoremap <leader>u :UndotreeToggle<cr>
-nnoremap <leader>G :Gitv<cr>
+nnoremap <leader>U :Gitv<cr>
 " git diff
 nnoremap <silent> <leader>g :Gdiff<cr>
 nnoremap <silent> <leader>s :Gstatus<cr>
@@ -318,15 +318,9 @@ nnoremap <silent> <leader>3 :diffget //3<cr>
 nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
 " :browse oldfiles
 nnoremap <silent> <leader>O :Mru<cr>
-nnoremap <silent> <leader>l :tabmove +1<cr>
-nnoremap <silent> <leader>h :tabmove -1<cr>
-nnoremap <silent> <leader>n :lnext<cr>
-nnoremap <silent> <leader>p :lprev<cr>
-nnoremap <silent> <leader>J :set ft=html<cr>
-nnoremap <silent> <leader>j :set ft=javascript<cr>
-nnoremap <silent> <leader>hn :GitGutterNextHunk<cr>
-nnoremap <silent> <leader>hp :GitGutterPrevHunk<cr>
-nnoremap <silent> <leader>hv :GitGutterPreviewHunk<cr>
+nnoremap <silent> <leader>l :ll<cr>
+nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
+nnoremap <leader>b :let g:gitgutter_diff_base = 'origin/develop'
 nnoremap <silent> g1 1gt
 nnoremap <silent> g2 2gt
 nnoremap <silent> g3 3gt
