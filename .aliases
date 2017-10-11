@@ -82,3 +82,6 @@ vims() {
 vimpr() {
     vim -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
+vimprv() {
+    vim -O `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
