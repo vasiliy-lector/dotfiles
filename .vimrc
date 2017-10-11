@@ -269,32 +269,35 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:used_javascript_libs = 'react,jasmine'
 
 " custom mapping
-nnoremap <silent> gq :tabclose<cr>
-nnoremap <silent> gn :tabnew<cr>
-nnoremap <silent> <leader>w :Gwrite<cr>
-nnoremap <leader>f mM:Ag<space>
-nnoremap <leader>h :UndotreeToggle<cr>
+nnoremap <leader>f mM:Ag<space> " search
+nnoremap <leader>h :UndotreeToggle<cr> " view local history
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l> " refresh
-nmap <silent> <leader><space> :NERDTreeFind<CR>
+nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " current open buffers
+nnoremap <silent> <leader>O :Mru<cr> " browse oldfiles
+" NERDTree
+nmap <silent> <leader><space> :NERDTreeFind<CR> " open and find current file
 nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR> " close nerdtree and quick fix windows
 
-" fugitive
-nmap <silent> <leader>b :Gblame<cr>
-nnoremap <leader>g :Gitv<cr>
-nnoremap <silent> <leader>d :Gdiff<cr>
-nnoremap <silent> <leader>s :Gstatus<cr>
+" git
+nmap <silent> <leader>b :Gblame<cr> " blame
+nnoremap <leader>g :Gitv<cr> " git history with info about index and remotes
+nnoremap <silent> <leader>r :Gread<cr> " checkout current file
+nnoremap <silent> <leader>w :Gwrite<cr> " add current file to index
+nnoremap <silent> <leader>d :Gdiff<cr> " diff in visual mode of current file
+nnoremap <silent> <leader>s :Gstatus<cr> " open quick fix window with git status
 nnoremap <silent> <leader>> :diffget<cr>
 nnoremap <silent> <leader>< :diffput<cr>
-nnoremap <silent> <leader>2 :diffget //2<cr>
-nnoremap <silent> <leader>3 :diffget //3<cr>
-nnoremap <silent> <leader>l :ll<cr>
-nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
+nnoremap <silent> <leader>2 :diffget //2<cr> " resolving merge conflicts
+nnoremap <silent> <leader>3 :diffget //3<cr> " resolving merge conflicts
+nnoremap <silent> <leader>l :ll<cr> " jump to current linting error (]l and [l to jump between them)
+nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr> " preview current hunk
 nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
-nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
-nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
-nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " :current open
-nnoremap <silent> <leader>O :Mru<cr> " :browse oldfiles
+nnoremap <silent> <leader>u :GitGutterRevertHunk<cr> " undo current hunk
+nnoremap <silent> <leader>a :GitGutterStageHunk<cr> " add hunk to index
+" working with tabs
+nnoremap <silent> gq :tabclose<cr>
+nnoremap <silent> gn :tabnew<cr>
 nnoremap <silent> g1 1gt
 nnoremap <silent> g2 2gt
 nnoremap <silent> g3 3gt
@@ -306,6 +309,7 @@ nnoremap <silent> g7 7gt
 nnoremap <silent> g8 8gt
 nnoremap <silent> g9 9gt
 nnoremap <silent> g$ :tablast<cr>
+" mappings for flow and typescript
 autocmd FileType javascript nnoremap <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <silent> <leader>t :FlowType<cr>
 autocmd FileType typescript nnoremap <silent> <leader>j :YcmCompleter GoToDefinition<cr>
