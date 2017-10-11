@@ -274,12 +274,11 @@ nnoremap <C-w>t :tabnew<cr>
 nnoremap <silent> <leader>w :Gwrite<cr>
 nnoremap <leader>f mM:Ag<space>
 nnoremap <leader>h :UndotreeToggle<cr>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l> " refresh
 nmap <silent> <leader><space> :NERDTreeFind<CR>
-nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
+nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR> " close nerdtree and quick fix windows
 
 " fugitive
-nmap <silent> <leader>a :.Gblame<cr>
 nmap <silent> <leader>b :Gblame<cr>
 nnoremap <leader>g :Gitv<cr>
 nnoremap <silent> <leader>d :Gdiff<cr>
@@ -293,7 +292,7 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
-nnoremap <silent> <leader>i :GitGutterStageHunk<cr>
+nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
 nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " :current open
 nnoremap <silent> <leader>O :Mru<cr> " :browse oldfiles
 nnoremap <silent> g1 1gt
