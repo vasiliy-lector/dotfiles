@@ -269,8 +269,8 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:used_javascript_libs = 'react,jasmine'
 
 " custom mapping
-nnoremap <C-w>c :tabclose<cr>
-nnoremap <C-w>t :tabnew<cr>
+nnoremap <silent> gq :tabclose<cr>
+nnoremap <silent> gn :tabnew<cr>
 nnoremap <silent> <leader>w :Gwrite<cr>
 nnoremap <leader>f mM:Ag<space>
 nnoremap <leader>h :UndotreeToggle<cr>
