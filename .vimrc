@@ -211,7 +211,7 @@ endif
 " NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=0
-let g:NERDTreeWinSize=47
+let g:NERDTreeWinSize=42
 
 " delimitMate
 let delimitMate_matchpairs = '(:),[:],{:}'
