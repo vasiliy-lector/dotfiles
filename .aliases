@@ -69,15 +69,23 @@ alias vim9='vim `gdn 9`';
 # ctags
 alias ct='ctags -R --totals --exclude=node_modules --exclude=mocks'
 
+vimdt() {
+    vim -p `gd --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
+vimdv() {
+    vim -O `gd --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
 vimd() {
-    if [[ -z $1 ]]; then
-        vim -p `gd --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-    else
-        vim -p `gd "$1" --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-    fi
+    vim `gd --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
+vimst() {
+    vim -p `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+}
+vimsv() {
+    vim -O `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vims() {
-    vim -p `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+    vim `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vimprt() {
     vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
