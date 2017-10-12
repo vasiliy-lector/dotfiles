@@ -269,32 +269,50 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:used_javascript_libs = 'react,jasmine'
 
 " custom mapping
-nnoremap <leader>f mM:Ag<space> " search
-nnoremap <leader>h :UndotreeToggle<cr> " view local history
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l> " refresh
-nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr> " current open buffers
-nnoremap <silent> <leader>O :Mru<cr> " browse oldfiles
+" search
+nnoremap <leader>f mM:Ag<space>
+" view local history
+nnoremap <leader>h :UndotreeToggle<cr>
+" refresh
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
+" current open buffers
+nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
+" browse oldfiles
+nnoremap <silent> <leader>O :Mru<cr>
 " NERDTree
-nmap <silent> <leader><space> :NERDTreeFind<CR> " open and find current file
-nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR> " close nerdtree and quick fix windows
+" open and find current file
+nmap <silent> <leader><space> :NERDTreeFind<CR>
+" close nerdtree and quick fix windows
+nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
 
 " git
-nmap <silent> <leader>b :Gblame<cr> " blame
-nnoremap <leader>g :Gitv<cr> " git history with info about index and remotes
-nnoremap <silent> <leader>r :Gread<cr> " checkout current file
-nnoremap <silent> <leader>w :Gwrite<cr> " add current file to index
-nnoremap <silent> <leader>d :Gdiff<cr> " diff in visual mode of current file
-nnoremap <silent> <leader>s :Gstatus<cr> " open quick fix window with git status
+" blame
+nmap <silent> <leader>b :Gblame<cr>
+" git history with info about index and remotes
+nnoremap <leader>g :Gitv<cr>
+" checkout current file
+nnoremap <silent> <leader>r :Gread<cr>
+" add current file to index
+nnoremap <silent> <leader>w :Gwrite<cr>
+" diff in visual mode of current file
+nnoremap <silent> <leader>d :Gdiff<cr>
+" open quick fix window with git status
+nnoremap <silent> <leader>s :Gstatus<cr>
 nnoremap <silent> <leader>> :diffget<cr>
 nnoremap <silent> <leader>< :diffput<cr>
-nnoremap <silent> <leader>2 :diffget //2<cr> " resolving merge conflicts
-nnoremap <silent> <leader>3 :diffget //3<cr> " resolving merge conflicts
+" resolving merge conflicts
+nnoremap <silent> <leader>2 :diffget //2<cr>
+" resolving merge conflicts
+nnoremap <silent> <leader>3 :diffget //3<cr>
 nnoremap <silent> <leader>l :ll<cr> " jump to current linting error (]l and [l to jump between them)
-nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr> " preview current hunk
+" preview current hunk
+nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
-nnoremap <silent> <leader>u :GitGutterRevertHunk<cr> " undo current hunk
-nnoremap <silent> <leader>a :GitGutterStageHunk<cr> " add hunk to index
+" undo current hunk
+nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
+" add hunk to index
+nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
 " working with tabs
 nnoremap <silent> gq :tabclose<cr>
 nnoremap <silent> gn :tabnew<cr>
