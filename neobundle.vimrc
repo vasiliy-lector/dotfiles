@@ -42,7 +42,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'ap/vim-css-color'
-NeoBundle 'matze/vim-move' " move lines with <M-k> and <M-j>
+" NeoBundle 'matze/vim-move' " move lines with <M-k> and <M-j>
 NeoBundle 'Raimondi/delimitMate' " auto close brackets
 
 NeoBundle 'pangloss/vim-javascript'

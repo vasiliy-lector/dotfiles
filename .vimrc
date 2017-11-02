@@ -305,10 +305,12 @@ nnoremap <silent> <leader>2 :diffget //2<cr>
 " resolving merge conflicts
 nnoremap <silent> <leader>3 :diffget //3<cr>
 nnoremap <silent> <leader>l :ll<cr> " jump to current linting error (]l and [l to jump between them)
+nnoremap <silent> <leader>n :lnext<cr> " jump to current linting error (]l and [l to jump between them)
+nnoremap <silent> <leader>p :lprev<cr> " jump to current linting error (]l and [l to jump between them)
 " preview current hunk
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
-nnoremap <silent> <leader>n :GitGutterNextHunk<cr>
-nnoremap <silent> <leader>p :GitGutterPrevHunk<cr>
+nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
+nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 " undo current hunk
 nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
 " add hunk to index
