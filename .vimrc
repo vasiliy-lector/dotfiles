@@ -412,6 +412,17 @@ augroup filetypedetect
     au BufRead,BufNewFile *.jsx setfiletype javascript
 augroup END
 
+let g:user_emmet_settings = {
+\  'typescript' : {
+\      'extends' : 'jsx',
+\      'quote_char': "'",
+\  },
+\  'javascript' : {
+\      'extends' : 'jsx',
+\      'quote_char': "'",
+\  },
+\}
+let g:user_emmet_expandabbr_key = '<C-e>'
 
 hi EndOfBuffer cterm=none ctermfg=bg
 hi TabLineFill cterm=none ctermfg=white ctermbg=16

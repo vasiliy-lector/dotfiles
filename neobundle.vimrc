@@ -48,6 +48,7 @@ NeoBundle 'Raimondi/delimitMate' " auto close brackets
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'mattn/emmet-vim'
 
 NeoBundle 'groenewege/vim-less'
 NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html', 'css']}}
