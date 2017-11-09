@@ -73,6 +73,7 @@ set undofile
 set autoindent              " copy indent from previous line
 set smartindent             " enable nice indent
 set smarttab                " indent using shiftwidth"
+set cindent
 set expandtab               " tab with spaces
 set shiftwidth=4            " number of spaces to use for each step of indent
 set tabstop=4
@@ -266,7 +267,7 @@ let g:gitgutter_sign_modified_removed = ' ‾'
 let g:move_key_modifier = 'C'
 let g:xml_syntax_folding = 0
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:used_javascript_libs = 'react,jasmine'
+let g:used_javascript_libs = 'jasmine'
 
 " custom mapping
 " search
@@ -333,7 +334,9 @@ nnoremap <silent> g$ :tablast<cr>
 " mappings for flow and typescript
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>t :FlowType<cr>
+autocmd FileType typescript nnoremap <buffer> <leader>e :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
+autocmd FileType typescript nnoremap <buffer> <silent> <leader>J :YcmCompleter GoToReferences<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
 "Search visual selection by *
