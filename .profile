@@ -8,6 +8,7 @@ unset file
 
 source ~/git-completion.bash
 source ~/git-prompt.sh
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh"
 
 if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion

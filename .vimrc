@@ -104,6 +104,7 @@ function! UpdateTags()
   let resp = system(cmd)
 endfunction
 autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
+autocmd BufWrite *.ts,*.tsx :Autoformat
 
 " Search options
 set gdefault                " Add the g flag to search/replace by default
@@ -179,7 +180,7 @@ augroup vimrc
 
 augroup END
 
-colorscheme solarized
+colorscheme gruvbox
 
 " Unite
 
@@ -271,7 +272,7 @@ let g:used_javascript_libs = 'jasmine'
 
 " custom mapping
 " search
-nnoremap <leader>f mM:Ag<space>
+nnoremap <leader>f mM:Ag<space><c-r><c-w><cr>
 " view local history
 nnoremap <leader>h :UndotreeToggle<cr>
 " refresh

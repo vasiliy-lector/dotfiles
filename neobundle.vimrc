@@ -39,6 +39,7 @@ NeoBundle 'mbbill/undotree' " shows all undo tree
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-scripts/tlib' " dependency for airline?
 NeoBundle 'bling/vim-airline'
+NeoBundle 'morhetz/gruvbox'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'ap/vim-css-color'
@@ -60,6 +61,7 @@ NeoBundleLazy 'flowtype/vim-flow', {'autoload': {'filetypes': 'javascript'}}
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'HerringtonDarkholme/yats.vim' " yet another typescript
 NeoBundle 'Quramy/vim-js-pretty-template'
+NeoBundle 'Chiel92/vim-autoformat'
 
 call neobundle#end()
 filetype plugin indent on
