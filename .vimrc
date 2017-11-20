@@ -106,6 +106,9 @@ endfunction
 autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
 autocmd BufWrite *.ts,*.tsx :Autoformat
 
+autocmd FilterWritePre * if &diff | setlocal nofoldenable | endif
+autocmd FilterWritePost * if &diff | setlocal nofoldenable | endif
+
 " Search options
 set gdefault                " Add the g flag to search/replace by default
 set hlsearch                " Highlight search results
@@ -272,6 +275,9 @@ let g:xml_syntax_folding = 0
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:used_javascript_libs = 'jasmine'
 
+let g:colorizer_startup = 0
+let g:colorizer_nomap = 1
+
 " custom mapping
 " search
 nnoremap <leader>f mM:Ag<space><c-r><c-w><cr>
@@ -315,6 +321,7 @@ nnoremap <silent> <leader>p :lprev<cr> " jump to current linting error (]l and [
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
+nnoremap <silent> <leader>c :ColorToggle<cr>
 " undo current hunk
 nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
 " add hunk to index
