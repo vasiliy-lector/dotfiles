@@ -321,7 +321,7 @@ nnoremap <silent> <leader>p :lprev<cr> " jump to current linting error (]l and [
 nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
-nnoremap <silent> <leader>c :ColorToggle<cr>
+nnoremap <silent> <leader>z :ColorToggle<cr>
 " undo current hunk
 nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
 " add hunk to index
