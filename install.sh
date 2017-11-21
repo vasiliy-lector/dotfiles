@@ -45,6 +45,7 @@ echo Done
 echo Next you need to do:
 echo "1) Set iTerm2 settings: Keys -> Remap Modifier Keys -> Right command to Control"
 echo "2) Set Mac OS settings: System Preferences -> Keyboard -> Modifier Keys -> Caps Lock to Escape"
-echo "3) Set default colour scheme for iTerm2: Profiles -> Colors -> Color Presets to Solarized Dark"
-echo "4) Download, install and set as default for iTerm2 following font: https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf"
-echo "5) Restart iTerm 2 and run vim"
+echo "3) Download and install gruvbox theme for iterm2: https://github.com/morhetz/gruvbox-contrib/blob/master/iterm2/gruvbox-dark.itermcolors"
+echo "4) Set default colour scheme for iTerm2: Profiles -> Colors -> Color Presets to gruvbox"
+echo "5) Download, install and set as default for iTerm2 following font: https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf"
+echo "6) Restart iTerm 2 and run vim"
