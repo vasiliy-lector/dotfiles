@@ -104,7 +104,9 @@ function! UpdateTags()
   let resp = system(cmd)
 endfunction
 autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
+
 autocmd BufWrite *.ts,*.tsx :Autoformat
+let g:autoformat_autoindent = 0
 
 autocmd FilterWritePre * if &diff | setlocal nofoldenable | endif
 autocmd FilterWritePost * if &diff | setlocal nofoldenable | endif
