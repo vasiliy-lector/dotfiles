@@ -82,8 +82,8 @@ set shiftround              " drop unused spaces
 " let g:html_indent_inctags = "html,body,head,tbody"
 
 " add ./src to path for case of absolute paths
-let curPath = getcwd()
-exec "set path+=".curPath."/src"
+" let curPath = getcwd()
+" exec "set path+=".curPath."/src"
 
 function! DelTagOfFile(file)
   let fullpath = a:file
@@ -324,8 +324,6 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
-" undo current hunk
-nnoremap <silent> <leader>u :GitGutterRevertHunk<cr>
 " add hunk to index
 nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
 " working with tabs
@@ -346,9 +344,9 @@ nnoremap <silent> g$ :tablast<cr>
 " mappings for flow and typescript
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>t :FlowType<cr>
+autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToReferences<cr>
 autocmd FileType typescript nnoremap <buffer> <leader>e :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
-autocmd FileType typescript nnoremap <buffer> <silent> <leader>J :YcmCompleter GoToReferences<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
 "Search visual selection by *
