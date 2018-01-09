@@ -30,6 +30,7 @@ git config --global user.email "$email"
 
 cp git-completion.bash ~/git-completion.bash
 cp git-prompt.sh ~/git-prompt.sh
+cp gruvbox_256palette.sh ~/gruvbox_256palette.sh
 
 source ~/.profile
 

@@ -185,8 +185,7 @@ augroup vimrc
 
 augroup END
 
-set background=dark
-let g:gruvbox_contrast_dark='medium'
+set background=light
 colorscheme gruvbox
 
 " Unite
