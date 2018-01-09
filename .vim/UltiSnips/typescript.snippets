@@ -24,3 +24,13 @@ snippet console
 // tslint:disable:next no-console
 console.log($1);
 endsnippet
+
+snippet Stateless
+import { h, StatelessComponent } from 'rerender';
+
+type Props = {};
+
+const $1: StatelessComponent<Props> = ({}) => {};
+
+export default $1;
+endsnippet

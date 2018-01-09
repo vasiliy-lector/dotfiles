@@ -301,10 +301,6 @@ nmap <silent> <leader>c :NERDTreeClose<CR>:pclose<CR>
 nmap <silent> <leader>b :Gblame<cr>
 " git history with info about index and remotes
 nnoremap <leader>g :Gitv<cr>
-" checkout current file
-nnoremap <silent> <leader>r :Gread<cr>
-" add current file to index
-nnoremap <silent> <leader>w :Gwrite<cr>
 " diff in visual mode of current file
 nnoremap <silent> <leader>d :Gdiff<cr>
 " open quick fix window with git status
