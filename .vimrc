@@ -226,7 +226,7 @@ let delimitMate_matchpairs = '(:),[:],{:}'
 let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 
-let g:airline_theme='base16'
+let g:airline_theme='gruvbox'
 " air-line
 let g:airline_powerline_fonts = 1
 
