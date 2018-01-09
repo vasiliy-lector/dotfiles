@@ -426,13 +426,13 @@ let g:user_emmet_settings = {
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 hi EndOfBuffer cterm=none ctermfg=bg
-hi TabLineFill cterm=none ctermfg=white ctermbg=16
-hi TabLine cterm=none ctermfg=white ctermbg=16
-hi VertSplit cterm=none ctermfg=16 ctermbg=16
-hi StatusLine cterm=none ctermbg=16
-hi StatusLineNC cterm=none ctermfg=16 ctermbg=16
-hi TabLineSel cterm=none ctermfg=black ctermbg=7
-hi Title cterm=none ctermfg=none ctermbg=none
+hi TabLineFill cterm=none ctermfg=black ctermbg=white
+hi TabLine cterm=none ctermfg=black ctermbg=white
+" hi VertSplit cterm=none ctermfg=16 ctermbg=16
+" hi StatusLine cterm=none ctermbg=16
+" hi StatusLineNC cterm=none ctermfg=16 ctermbg=16
+" hi TabLineSel cterm=none ctermfg=black ctermbg=7
+" hi Title cterm=none ctermfg=none ctermbg=none
 hi MatchParen cterm=none ctermfg=white ctermbg=5
 hi Visual cterm=none ctermfg=white ctermbg=38
 hi IncSearch cterm=none ctermfg=black ctermbg=220
