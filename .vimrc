@@ -436,15 +436,14 @@ hi MatchParen cterm=none ctermfg=white ctermbg=5
 hi Visual cterm=none ctermfg=white ctermbg=38
 hi IncSearch cterm=none ctermfg=black ctermbg=220
 hi Search cterm=none ctermfg=white ctermbg=5
-hi AleErrorSign cterm=none ctermfg=160 ctermbg=bg
-hi AleWarningSign cterm=none ctermfg=220 ctermbg=bg
+hi AleErrorSign cterm=none ctermfg=160
+hi AleWarningSign cterm=none ctermfg=220
 hi GitGutterAdd cterm=none ctermbg=2
 hi GitGutterChange cterm=none ctermbg=4
 hi GitGutterChangeDelete cterm=none ctermbg=4
-hi GitGutterDelete cterm=none ctermfg=160 ctermbg=bg
-hi SignColumn ctermbg=bg
-hi clear CursorLineNR
-hi CursorLineNR ctermbg=bg
+hi GitGutterDelete cterm=none ctermfg=160
+" hi clear CursorLineNR
+" hi CursorLineNR ctermbg=bg
 
 " make cursor box in command mode and vertical bar in insert mode
 if exists('$TMUX')
