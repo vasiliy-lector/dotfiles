@@ -426,13 +426,6 @@ let g:user_emmet_settings = {
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 hi EndOfBuffer cterm=none ctermfg=bg
-hi TabLineFill cterm=none ctermfg=black ctermbg=white
-hi TabLine cterm=none ctermfg=black ctermbg=white
-" hi VertSplit cterm=none ctermfg=16 ctermbg=16
-" hi StatusLine cterm=none ctermbg=16
-" hi StatusLineNC cterm=none ctermfg=16 ctermbg=16
-" hi TabLineSel cterm=none ctermfg=black ctermbg=7
-" hi Title cterm=none ctermfg=none ctermbg=none
 hi MatchParen cterm=none ctermfg=white ctermbg=5
 hi Visual cterm=none ctermfg=white ctermbg=38
 hi IncSearch cterm=none ctermfg=black ctermbg=220
@@ -442,10 +435,7 @@ hi AleWarningSign cterm=none ctermfg=220
 hi GitGutterAdd cterm=none ctermbg=2
 hi GitGutterChange cterm=none ctermbg=4
 hi GitGutterChangeDelete cterm=none ctermbg=4
-hi GitGutterDelete cterm=none ctermfg=160
 hi Terminal ctermfg=white ctermbg=black
-" hi clear CursorLineNR
-" hi CursorLineNR ctermbg=bg
 
 " make cursor box in command mode and vertical bar in insert mode
 if exists('$TMUX')
