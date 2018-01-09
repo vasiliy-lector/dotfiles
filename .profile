@@ -1,11 +1,5 @@
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{exports,aliases,bash_prompt}; do
-    [ -r "$file" ] && source "$file"
-done
-unset file
-
+source ~/.exports
+source ~/.aliases
 source ~/git-completion.bash
 source ~/git-prompt.sh
 source ~/gruvbox_256palette.sh

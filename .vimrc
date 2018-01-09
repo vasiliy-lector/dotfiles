@@ -286,6 +286,7 @@ nnoremap <leader>f mM:Ag<space><c-r><c-w><cr>
 nnoremap <leader>h :UndotreeToggle<cr>
 " refresh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
+nnoremap <silent> <C-t> :terminal++close<cr>source ~/.profile<cr><C-l>
 " current open buffers
 nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
 " browse oldfiles
@@ -442,6 +443,7 @@ hi GitGutterAdd cterm=none ctermbg=2
 hi GitGutterChange cterm=none ctermbg=4
 hi GitGutterChangeDelete cterm=none ctermbg=4
 hi GitGutterDelete cterm=none ctermfg=160
+hi Terminal ctermfg=white ctermbg=black
 " hi clear CursorLineNR
 " hi CursorLineNR ctermbg=bg
 
