@@ -103,7 +103,7 @@ function! UpdateTags()
   call DelTagOfFile(f)
   let resp = system(cmd)
 endfunction
-autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
+" autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
 
 autocmd BufWrite *.ts,*.tsx :Autoformat
 let g:autoformat_autoindent = 0
@@ -426,12 +426,14 @@ let g:user_emmet_settings = {
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 hi EndOfBuffer cterm=none ctermfg=bg
-hi MatchParen cterm=none ctermfg=white ctermbg=5
+hi YcmErrorSection cterm=underline
+hi YcmWarningSection cterm=underline
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
 hi Visual cterm=none ctermfg=white ctermbg=38
 hi IncSearch cterm=none ctermfg=black ctermbg=220
 hi Search cterm=none ctermfg=white ctermbg=5
-hi AleErrorSign cterm=none ctermfg=160
-hi AleWarningSign cterm=none ctermfg=220
+hi MatchParen cterm=none ctermfg=white ctermbg=5
 hi GitGutterAdd cterm=none ctermbg=2
 hi GitGutterChange cterm=none ctermbg=4
 hi GitGutterChangeDelete cterm=none ctermbg=4
