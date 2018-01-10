@@ -16,6 +16,7 @@ NeoBundle 'Shougo/unite.vim' " Unite. The interface to rule almost everything
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}}
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
 NeoBundle 'sirver/ultisnips' " snippets
 

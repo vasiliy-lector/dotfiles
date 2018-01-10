@@ -425,6 +425,19 @@ let g:user_emmet_settings = {
 \}
 let g:user_emmet_expandabbr_key = '<C-e>'
 
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
 hi EndOfBuffer cterm=none ctermfg=bg
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline
