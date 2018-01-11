@@ -326,17 +326,6 @@ nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
 nnoremap <silent> gq :tabclose<cr>
 nnoremap <silent> gn :tabnew<cr>
 nnoremap <silent> go :tabonly<cr> " close other tabs
-nnoremap <silent> g1 1gt
-nnoremap <silent> g2 2gt
-nnoremap <silent> g3 3gt
-nnoremap <silent> g4 4gt
-nnoremap <silent> g4 4gt
-nnoremap <silent> g5 5gt
-nnoremap <silent> g6 6gt
-nnoremap <silent> g7 7gt
-nnoremap <silent> g8 8gt
-nnoremap <silent> g9 9gt
-nnoremap <silent> g$ :tablast<cr>
 " mappings for flow and typescript
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>t :FlowType<cr>
