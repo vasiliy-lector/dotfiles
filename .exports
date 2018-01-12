@@ -7,7 +7,27 @@ export PATH=~/bin:$PATH
 export NODE_PATH=./node_modules:$NODE_PATH
 
 export LANG=ru_RU.UTF-8
-export PS1='\[\033[45m\]\[\033[30m\] \w \[\033[35m\]\[\033[44m\]\[\033[30m\]$(__git_ps1 " %s ")\[\033[0m\]\[\033[34m\]\[\033[0m\] '
+
+function parse_git_dirty {
+  [[ $(git diff --name-only 2> /dev/null) ]] && echo "✹"
+}
+function parse_git_dirty_staged {
+  [[ $(git diff --staged --name-only 2> /dev/null) ]] && echo "✚"
+}
+function parse_git_dirty_untracked {
+  [[ $(git ls-files --others --exclude-standard  2> /dev/null) ]] && echo "✭"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+}
+function get_git_info {
+    b=$(parse_git_branch)
+    d=$(parse_git_dirty)$(parse_git_dirty_staged)$(parse_git_dirty_untracked)
+    [[ $b && $d ]] && i="$b $d" || i=$b
+    [[ $i ]] && echo " $i "
+}
+
+export PS1='\[\033[45m\]\[\033[30m\] \w \[\033[35m\]\[\033[44m\]\[\033[30m\]$(get_git_info)\[\033[0m\]\[\033[34m\]\[\033[0m\] '
 PROMPT_TITLE='echo -ne "\033]0;${PWD/#$HOME/~}/$(__git_ps1 "%s/")\007"'
 export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE};"
 
