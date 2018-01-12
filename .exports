@@ -24,7 +24,7 @@ function get_git_info {
     b=$(parse_git_branch)
     d=$(parse_git_dirty)$(parse_git_dirty_staged)$(parse_git_dirty_untracked)
     [[ $b && $d ]] && i="$b $d" || i=$b
-    [[ $i ]] && echo " $i "
+    [[ $i ]] && echo "  $i "
 }
 
 export PS1='\[\033[45m\]\[\033[30m\] \w \[\033[35m\]\[\033[44m\]\[\033[30m\]$(get_git_info)\[\033[0m\]\[\033[34m\]\[\033[0m\] '
