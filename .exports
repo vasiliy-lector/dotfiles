@@ -17,14 +17,11 @@ function parse_git_dirty_staged {
 function parse_git_dirty_untracked {
   [[ $(git ls-files --others --exclude-standard  2> /dev/null) ]] && echo "✭"
 }
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
-}
 function parse_git_unpushed {
   [[ $(git log --branches --not --remotes  2> /dev/null) ]] && echo "⬆"
 }
 function get_git_info {
-    b=$(parse_git_branch)
+    b=$(__git_ps1 "%s")
     d=$(parse_git_dirty)$(parse_git_dirty_staged)$(parse_git_dirty_untracked)$(parse_git_unpushed)
     [[ $b && $d ]] && i="$b $d" || i=$b
     [[ $i ]] && echo "  $i "
