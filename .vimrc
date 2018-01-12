@@ -286,7 +286,7 @@ nnoremap <leader>f mM:Ag<space><c-r><c-w><cr>
 nnoremap <leader>h :UndotreeToggle<cr>
 " refresh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
-nnoremap <silent> <C-t> :terminal++close<cr>source ~/.profile<cr><C-l>
+nnoremap <silent> <C-t> :terminal++close<cr>
 " current open buffers
 nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
 " browse oldfiles
