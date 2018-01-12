@@ -31,6 +31,7 @@ alias gs='git status'
 alias gst='git stash'
 alias gsts='git stash save'
 alias wm='cd ~/work/wealth-management'
+alias unpushed='git log --branches --not --remotes'
 gsta() {
     git stash apply stash@{$1}
 }
