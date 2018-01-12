@@ -14,6 +14,7 @@ gc() {
         git commit -m "$@"
     fi
 }
+alias gca='git commit --amend'
 alias gd='git di'
 alias gdc='git di --cached'
 alias gds='git di --staged'
