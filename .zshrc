@@ -64,7 +64,7 @@ ZSH_HIGHLIGHT_STYLES=(
     'command'         'fg=green'
     'hashed-commands' 'fg=green,underline'
     'precommand'      'fg=cyan'
-    'path'            'fg=white'
+    'path'            'fg=default'
 )
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
