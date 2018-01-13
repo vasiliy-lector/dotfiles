@@ -2,6 +2,8 @@ DEFAULT_USER=`whoami`
 
 export CLICOLOR=yes
 export TERM=xterm-256color
+export LANG=ru_RU.UTF-8
+export LC_ALL=ru_RU.UTF-8
 
 # man pages colors
 export LESS_TERMCAP_me=$'\E[0m'
