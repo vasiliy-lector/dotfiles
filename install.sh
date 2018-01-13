@@ -17,6 +17,8 @@ brew install ctags
 brew install typespeed
 brew install git
 brew install node
+brew install zsh
+brew install antigen
 
 npm install -g typescript
 
@@ -49,4 +51,6 @@ echo "2) Set Mac OS settings: System Preferences -> Keyboard -> Modifier Keys ->
 echo "3) Download and install gruvbox theme for iterm2: https://github.com/morhetz/gruvbox-contrib/blob/master/iterm2/gruvbox-dark.itermcolors"
 echo "4) Set default colour scheme for iTerm2: Profiles -> Colors -> Color Presets to gruvbox"
 echo "5) Download, install and set as default for iTerm2 following font: https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf"
-echo "6) Restart iTerm 2 and run vim"
+echo "6) Execute sudo vim /etc/shells and add line /usr/local/bin/zsh"
+echo "7) Execute chsh -s /usr/local/bin/zsh to set zsh default shell"
+echo "8) Restart iTerm 2 and run vim"
