@@ -364,8 +364,12 @@ hi Visual cterm=none ctermfg=white ctermbg=38
 hi IncSearch cterm=none ctermfg=black ctermbg=220
 hi Search cterm=none ctermfg=white ctermbg=5
 hi MatchParen cterm=none ctermfg=white ctermbg=5
-hi GitGutterAdd cterm=none ctermbg=2
-hi GitGutterChange cterm=none ctermbg=4
-hi GitGutterChangeDelete cterm=none ctermbg=4
+hi GitGutterAdd cterm=none ctermbg=darkgreen
+hi GitGutterChange cterm=none ctermbg=darkblue
+hi GitGutterChangeDelete cterm=none ctermbg=darkblue
 hi Terminal ctermfg=white ctermbg=black
+hi DiffAdd ctermfg=darkgreen ctermbg=black
+hi DiffDelete ctermfg=red ctermbg=red
+hi DiffChange ctermfg=darkblue ctermbg=black
+hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
