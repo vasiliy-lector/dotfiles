@@ -11,7 +11,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Vimproc to asynchronously run commands (NeoBundle, Unite)
 NeoBundle 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak', 'unix': 'make -f make_unix.mak'}}
-NeoBundle 'Shougo/unite.vim' " Unite. The interface to rule almost everything
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}}
@@ -26,7 +25,6 @@ NeoBundle 'kana/vim-textobj-fold' "az folding
 NeoBundle 'kana/vim-textobj-entire' "ae ie current buffer
 NeoBundle 'glts/vim-textobj-comment' "ac current comment
 NeoBundle 'tpope/vim-abolish' ":%S/{dog,man}/{man,dog}
-NeoBundle 'yegappan/mru' "history files
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-repeat'

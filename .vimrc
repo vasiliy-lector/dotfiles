@@ -161,26 +161,6 @@ augroup END
 set background=light
 colorscheme gruvbox
 
-" Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#custom#source('file_rec,file_rec/async,grep', 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/', 'node_modules/', 'libs/', 'log/'], '\|'))
-call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 10000)
-let g:unite_source_buffer_time_format = ''
-nmap <leader> [unite]
-nnoremap [unite] <nop>
-
-if executable('ag')
-    let g:unite_source_grep_command='ag'
-    let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden -S'
-    let g:unite_source_grep_recursive_opt=''
-    let g:unite_source_grep_search_word_highlight = 1
-elseif executable('ack')
-    let g:unite_source_grep_command='ack'
-    let g:unite_source_grep_default_opts='--no-group --no-color'
-    let g:unite_source_grep_recursive_opt=''
-    let g:unite_source_grep_search_word_highlight = 1
-endif
-
 " NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=0
@@ -198,6 +178,18 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -253,9 +245,9 @@ nnoremap <leader>h :UndotreeToggle<cr>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
 nnoremap <silent> <C-t> :terminal++close<cr>
 " current open buffers
-nnoremap <silent> <leader>o :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
+nnoremap <silent> <leader>o :CtrlPBuffer<cr>
 " browse oldfiles
-nnoremap <silent> <leader>O :Mru<cr>
+nnoremap <silent> <leader>O :CtrlPMRUFiles<cr>
 " NERDTree
 " open and find current file
 nmap <silent> <leader><space> :NERDTreeFind<CR>
