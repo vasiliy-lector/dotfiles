@@ -22,7 +22,6 @@ set autoread                " auto reload changed files
 au FocusGained,BufEnter,CursorHold * :silent! checktime
 
 " Display options
-set title                   " show file name in window title
 set novisualbell            " mute error bell
 set list
 set listchars=tab:⇥\ ,trail:·,extends:⋯,precedes:⋯,nbsp:~
