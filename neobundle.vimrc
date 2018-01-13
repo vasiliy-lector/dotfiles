@@ -46,7 +46,6 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
-" NeoBundle 'matze/vim-move' " move lines with <M-k> and <M-j>
 NeoBundle 'Raimondi/delimitMate' " auto close brackets
 
 NeoBundle 'pangloss/vim-javascript'

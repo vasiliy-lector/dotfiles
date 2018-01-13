@@ -20,7 +20,6 @@ set autoread                " auto reload changed files
 
 " reloads all buffers on switching between windows, tabs, and cursor move
 au FocusGained,BufEnter,CursorHold * :silent! checktime
-" au FocusLost,WinLeave,CursorHold * :silent! w
 
 " Display options
 set title                   " show file name in window title
@@ -46,7 +45,7 @@ set number                  " Show line numbers
 set cursorline
 
 set wrap
-" execute "set cc=".join(range(141,365), ',')
+" execute "set cc=".join(range(121,365), ',')
 
 " Edit
 set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old tex"
@@ -79,35 +78,11 @@ set shiftwidth=4            " number of spaces to use for each step of indent
 set tabstop=4
 set softtabstop=4           " tab like 4 spaces
 set shiftround              " drop unused spaces
-" let g:html_indent_inctags = "html,body,head,tbody"
-
-" add ./src to path for case of absolute paths
-" let curPath = getcwd()
-" exec "set path+=".curPath."/src"
-
-function! DelTagOfFile(file)
-  let fullpath = a:file
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let f = substitute(fullpath, cwd . "/", "", "")
-  let f = escape(f, './')
-  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
-  let resp = system(cmd)
-endfunction
-
-function! UpdateTags()
-  let f = expand("%:p")
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let cmd = 'ctags -a -f ' . tagfilename . ' --c++-kinds=+p --fields=+iaS --extra=+q ' . '"' . f . '"'
-  call DelTagOfFile(f)
-  let resp = system(cmd)
-endfunction
-" autocmd BufWritePost *.jsx,*.js,*.less,*.css call UpdateTags()
 
 autocmd BufWrite *.ts,*.tsx :Autoformat
 let g:autoformat_autoindent = 0
 
+" disable folding for diff mode
 autocmd FilterWritePre * if &diff | setlocal nofoldenable | endif
 autocmd FilterWritePost * if &diff | setlocal nofoldenable | endif
 
@@ -170,9 +145,7 @@ augroup vimrc
               \| exe "normal g'\"" | endif
 
   " Filetypes
-  autocmd FileType scss set ft=scss.css
   autocmd FileType less set ft=less.css
-  autocmd! FileType sass,scss syn cluster sassCssAttributes add=@cssColors
 
   autocmd BufRead,BufNewFile *.json set ft=javascript
   " autocmd BufRead,BufNewFile *.json set equalprg=python\ -mjson.tool
@@ -189,18 +162,10 @@ set background=light
 colorscheme gruvbox
 
 " Unite
-
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('file_rec,file_rec/async,grep', 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/', 'node_modules/', 'libs/', 'log/'], '\|'))
 call unite#custom#source('file_rec,file_rec/async', 'max_candidates', 10000)
-
 let g:unite_source_buffer_time_format = ''
-" let g:unite_enable_start_insert = 1
-" let g:unite_split_rule = "botright"
-" let g:unite_force_overwrite_statusline = 0
-" let g:unite_winheight = 10
-" let g:unite_candidate_icon="▷"
-
 nmap <leader> [unite]
 nnoremap [unite] <nop>
 
@@ -356,29 +321,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-" Helpers for snipmate
-" so ~/.vim/snippets/support_functions.vim
-
-" Slime-vim
-" Typical settings for tmux:
-" socket: "default"
-" pane: ":0.1"
-if executable('tmux')
-    let g:slime_target = "tmux"
-endif
-xmap gx <Plug>SlimeRegionSend
-" WARN: netrwPlugin has the same mapping
-nmap gx <Plug>SlimeParagraphSend
-
-let g:goog_user_conf = {
-            \ 'langpair': 'en|ru',
-            \ 'v_key': 'T'
-            \ }
-
-if has('gui_running')
-    source ~/.vim/.gvimrc
-endif
-
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -393,10 +335,6 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 let g:flow#enable = 0
-
-function! SQLUpperCase()
-    %s:\<analyze\>\|\<and\>\|\<as\>\|\<by\>\|\<desc\>\|\<exists\>\|\<explain\>\|\<from\>\|\<group\>\|\<in\>\|\<insert\>\|\<intersect\>\|\<into\>\|\<join\>\|\<limit\>\|\<not\>\|\<on\>\|\<order\>\|\<select\>\|\<set\>\|\<update\>\|\<where\>:\U&:i
-endfunction
 
 augroup filetypedetect
     au BufRead,BufNewFile *.jsx setfiletype javascript
@@ -413,19 +351,6 @@ let g:user_emmet_settings = {
 \  },
 \}
 let g:user_emmet_expandabbr_key = '<C-e>'
-
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
 
 " make cursor box in command mode and vertical bar in insert mode
 if exists('$TMUX')
