@@ -427,20 +427,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-hi EndOfBuffer cterm=none ctermfg=bg
-hi YcmErrorSection cterm=underline
-hi YcmWarningSection cterm=underline
-hi SpellBad cterm=underline
-hi SpellCap cterm=underline
-hi Visual cterm=none ctermfg=white ctermbg=38
-hi IncSearch cterm=none ctermfg=black ctermbg=220
-hi Search cterm=none ctermfg=white ctermbg=5
-hi MatchParen cterm=none ctermfg=white ctermbg=5
-hi GitGutterAdd cterm=none ctermbg=2
-hi GitGutterChange cterm=none ctermbg=4
-hi GitGutterChangeDelete cterm=none ctermbg=4
-hi Terminal ctermfg=white ctermbg=black
-
 " make cursor box in command mode and vertical bar in insert mode
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
@@ -453,3 +439,17 @@ endif
 if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)
 endif
+
+hi YcmErrorSection cterm=underline
+hi YcmWarningSection cterm=underline
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
+hi Visual cterm=none ctermfg=white ctermbg=38
+hi IncSearch cterm=none ctermfg=black ctermbg=220
+hi Search cterm=none ctermfg=white ctermbg=5
+hi MatchParen cterm=none ctermfg=white ctermbg=5
+hi GitGutterAdd cterm=none ctermbg=2
+hi GitGutterChange cterm=none ctermbg=4
+hi GitGutterChangeDelete cterm=none ctermbg=4
+hi Terminal ctermfg=white ctermbg=black
+hi EndOfBuffer cterm=none ctermfg=bg
