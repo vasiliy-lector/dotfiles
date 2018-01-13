@@ -29,4 +29,3 @@ antigen apply
 update_title () {print -Pn "\e]0;%~/$(git rev-parse --is-inside-work-tree &>/dev/null && git symbolic-ref HEAD | cut -d'/' -f3)\a"}
 add-zsh-hook precmd update_title
 add-zsh-hook preexec update_title
-
