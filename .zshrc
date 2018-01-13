@@ -54,7 +54,6 @@ export LESS_TERMCAP_us=$'\E[32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
 source /usr/local/share/antigen/antigen.zsh
-source ~/.aliases
 source ~/gruvbox_256palette.sh
 
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -76,6 +75,25 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
+
+source ~/.aliases
+alias -g /='cd /'
+alias -g ..='cd ..'
+alias -g ...='cd ../..'
+alias -g ....='cd ../../..'
+alias -g .....='cd ../../../..'
+alias -g ......='cd ../../../../..'
+
+alias -- -='cd -'
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
 
 # set path in terminal title
 update_title () {print -Pn "\e]0;%~/$(git rev-parse --is-inside-work-tree &>/dev/null && git symbolic-ref HEAD | cut -d'/' -f3)\a"}
