@@ -2,6 +2,9 @@ alias ll='ls -la'
 alias l='ls -l'
 alias la='ls -a'
 
+alias md='mkdir -p'
+alias d='dirs -v'
+
 alias grep='grep --color=auto'
 
 # Git
