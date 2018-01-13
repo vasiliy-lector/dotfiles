@@ -1,5 +1,28 @@
 DEFAULT_USER=`whoami`
 
+# vi mode
+bindkey -v
+
+zle -N edit-command-line
+# Updates editor information when the keymap changes.
+function zle-keymap-select() {
+  zle reset-prompt
+  zle -R
+}
+zle -N zle-keymap-select
+autoload -Uz edit-command-line
+bindkey '^v' edit-command-line
+
+bindkey '^p' up-history
+bindkey '^n' down-history
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+bindkey '^r' history-incremental-search-backward
+export KEYTIMEOUT=1
+
 # history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=999999999
@@ -34,11 +57,21 @@ source /usr/local/share/antigen/antigen.zsh
 source ~/.aliases
 source ~/gruvbox_256palette.sh
 
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES=(
+    'alias'           'fg=green,bold'
+    'builtin'         'fg=yellow'
+    'function'        'fg=blue,bold'
+    'command'         'fg=green'
+    'hashed-commands' 'fg=green,underline'
+    'precommand'      'fg=cyan'
+    'path'            'fg=white'
+)
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vi_mode dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
