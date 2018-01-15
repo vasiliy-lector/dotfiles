@@ -72,8 +72,15 @@ ZSH_HIGHLIGHT_STYLES=(
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
+function git_need_upstream {
+    [[ -d .git && ! $(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null) ]] && echo "⬆"
+}
+
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vi_mode dir rbenv vcs)
+POWERLEVEL9K_CUSTOM_NO_UPSTREAM="git_need_upstream"
+POWERLEVEL9K_CUSTOM_NO_UPSTREAM_BACKGROUND="red"
+POWERLEVEL9K_CUSTOM_NO_UPSTREAM_FOREGROUND="black"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context vi_mode dir rbenv vcs custom_no_upstream)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
