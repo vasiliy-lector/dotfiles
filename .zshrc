@@ -11,7 +11,8 @@ function zle-keymap-select() {
 }
 zle -N zle-keymap-select
 autoload -Uz edit-command-line
-bindkey '^v' edit-command-line
+bindkey '^f' edit-command-line
+bindkey -M vicmd '^f' edit-command-line
 
 bindkey '^p' up-history
 bindkey '^n' down-history
