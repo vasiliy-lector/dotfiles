@@ -247,6 +247,7 @@ nnoremap <leader>h :UndotreeToggle<cr>
 " refresh
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
 nnoremap <silent> <C-t> :terminal++close<cr>
+nnoremap <silent> <C-d> :xa<cr>
 " current open buffers
 nnoremap <silent> <leader>o :CtrlPBuffer<cr>
 " browse oldfiles
