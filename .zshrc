@@ -41,6 +41,8 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
+setopt interactivecomments
+
 export CLICOLOR=yes
 export TERM=xterm-256color
 export LANG=ru_RU.UTF-8
@@ -62,6 +64,7 @@ ZSH_HIGHLIGHT_STYLES=(
     'builtin'         'fg=yellow'
     'function'        'fg=blue,bold'
     'command'         'fg=green'
+    'comment'         'fg=grey'
     'hashed-commands' 'fg=green,underline'
     'precommand'      'fg=cyan'
     'path'            'fg=default'
