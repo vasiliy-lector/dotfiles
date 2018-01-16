@@ -9,6 +9,7 @@ alias md='mkdir -p'
 alias grep='grep --color=auto'
 
 # Git
+alias g='git'
 alias ga='git add --all'
 gc() {
     staged=$(git diff --staged --name-only);
