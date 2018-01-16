@@ -1,4 +1,4 @@
-alias wm='cd ~/work/wealth-management'
+alias wm='cd ~/work/wm'
 
 alias ll='ls -la'
 alias l='ls -l'
