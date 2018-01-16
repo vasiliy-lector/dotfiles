@@ -42,6 +42,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 setopt interactivecomments
+setopt correct
 
 export CLICOLOR=yes
 export TERM=xterm-256color
