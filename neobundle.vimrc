@@ -54,7 +54,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html', 'css']}}
 NeoBundle 'gregsexton/MatchTag'
-NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'chrisyip/Better-CSS-Syntax-for-Vim'
 
 NeoBundle 'w0rp/ale'
 NeoBundleLazy 'flowtype/vim-flow', {'autoload': {'filetypes': 'javascript'}}
