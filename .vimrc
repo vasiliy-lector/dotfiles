@@ -316,6 +316,9 @@ endif
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:ycm_semantic_triggers = {
+    \   'css': [ 're!^\s{4}', 're!:\s+' ],
+    \ }
 
 "ultiSnips
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
