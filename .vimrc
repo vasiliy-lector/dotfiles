@@ -48,7 +48,7 @@ set wrap
 
 " Edit
 set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old tex"
-set virtualedit=all
+set virtualedit=block
 set binary
 set eol
 set suffixesadd=.js,.ts,.tsx         " to open files without extension (es6 modules, requirejs, etc)
