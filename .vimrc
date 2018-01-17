@@ -157,7 +157,7 @@ augroup vimrc
 
 augroup END
 
-set background=light
+set background=dark
 colorscheme gruvbox
 
 " NERDTree
