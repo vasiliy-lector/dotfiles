@@ -196,10 +196,6 @@ let g:airline#extensions#tabline#show_close_button = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
@@ -291,7 +287,7 @@ nnoremap <silent> go :tabonly<cr> " close other tabs
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>j :FlowJumpToDef<cr>
 autocmd FileType javascript nnoremap <buffer> <silent> <leader>t :FlowType<cr>
 autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToReferences<cr>
-autocmd FileType typescript nnoremap <buffer> <leader>e :YcmCompleter RefactorRename 
+autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
