@@ -9,7 +9,6 @@ alias md='mkdir -p'
 alias grep='grep --color=auto'
 
 # Git
-alias g='git'
 alias ga='git add --all'
 alias gan='git add --intent-to-add .'
 gc() {
@@ -92,13 +91,13 @@ vimd() {
     vim `git diff --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vimst() {
-    vim -p `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+    vim -p `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vimsv() {
-    vim -O `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+    vim -O `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vims() {
-    vim `gds --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
+    vim `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
 }
 vimprt() {
     vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
