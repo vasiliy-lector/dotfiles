@@ -276,8 +276,8 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
-" add hunk to index
-nnoremap <silent> <leader>a :GitGutterStageHunk<cr>
+" alternate file
+nnoremap <silent> <leader>a :e #<cr>
 " working with tabs
 nnoremap <silent> gq :tabclose<cr>
 nnoremap <silent> gn :tabnew<cr>
