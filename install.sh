@@ -43,6 +43,15 @@ mkdir -p .vim/bundle/
 tar xf master
 mv neobundle.vim-master .vim/bundle/neobundle.vim
 rm master
+# setting input source switcher
+git clone https://github.com/vovkasm/input-source-switcher.git
+cd input-source-switcher
+mkdir build && cd build
+cmake ..
+make
+make install
+cd ../..
+rm -r input-source-switcher
 echo Done
 
 echo Next you need to do:
