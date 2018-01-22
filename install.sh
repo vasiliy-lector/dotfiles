@@ -51,7 +51,7 @@ cmake ..
 make
 make install
 cd ../..
-rm -r input-source-switcher
+rm -rf input-source-switcher
 echo Done
 
 echo Next you need to do:
