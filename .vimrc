@@ -283,8 +283,8 @@ nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
 nnoremap <silent> <leader>x :S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
 vnoremap <silent> <leader>x :'<,'>S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
-nnoremap <silent> <leader>- :S/{[ ],[x],[-]}/{[-],[-],[ ]}<cr>:noh<cr>
-vnoremap <silent> <leader>- :'<,'>S/{[ ],[x],[-]}/{[-],[-],[ ]}<cr>:noh<cr>
+nnoremap <silent> <leader>- :normal I- [ ] <cr>
+vnoremap <silent> <leader>- :'<,'>normal I- [ ] <cr>
 " alternate file
 nnoremap <silent> <leader>a :e #<cr>
 " working with tabs
