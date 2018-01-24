@@ -373,16 +373,13 @@ endif
 
 " encryption settings
 set cryptmethod=blowfish2
-autocmd BufReadPre * if system("head -c 9 " . expand("<afile>")) == "VimCrypt~" | call SetupEncryption() | endif
-function! SetupEncryption()
-    setlocal nobackup
-    setlocal nowritebackup
-    setlocal history=0
-    setlocal viminfo=
-    setlocal foldlevel=0
-    setlocal foldclose=all
-endfunction
+au BufRead * if &key!= ""
+    \ | setlocal nobackup history=0 nomodeline noshelltemp nowritebackup secure foldlevel=0 foldclose=all viminfo= noundofile
+    \ | endif
 
+au BufWritePost * if &key!= ""
+    \ | setlocal nobackup history=0 nomodeline noshelltemp nowritebackup secure foldlevel=0 foldclose=all viminfo= noundofile
+    \ | endif
 
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline
