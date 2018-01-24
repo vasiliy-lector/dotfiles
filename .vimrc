@@ -281,8 +281,10 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
-nnoremap <silent> <leader>x :S/{[ ],[x]}/{[x],[ ]}<cr>:noh<cr>
-vnoremap <silent> <leader>x :'<,'>S/{[ ],[x]}/{[x],[ ]}<cr>:noh<cr>
+nnoremap <silent> <leader>x :S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
+vnoremap <silent> <leader>x :'<,'>S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
+nnoremap <silent> <leader>- :S/{[ ],[x],[-]}/{[-],[-],[ ]}<cr>:noh<cr>
+vnoremap <silent> <leader>- :'<,'>S/{[ ],[x],[-]}/{[-],[-],[ ]}<cr>:noh<cr>
 " alternate file
 nnoremap <silent> <leader>a :e #<cr>
 " working with tabs
@@ -383,3 +385,6 @@ hi DiffDelete ctermfg=red ctermbg=red
 hi DiffChange ctermfg=darkblue ctermbg=black
 hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
+hi TodoEmpty cterm=bold ctermfg=yellow
+hi TodoDone cterm=bold ctermfg=green
+hi TodoUnDone cterm=bold ctermfg=red
