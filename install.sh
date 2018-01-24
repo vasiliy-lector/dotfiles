@@ -42,16 +42,13 @@ wget -q https://codeload.github.com/Shougo/neobundle.vim/tar.gz/master
 mkdir -p .vim/bundle/
 tar xf master
 mv neobundle.vim-master .vim/bundle/neobundle.vim
-rm master
-# setting input source switcher
-git clone https://github.com/vovkasm/input-source-switcher.git
-cd input-source-switcher
-mkdir build && cd build
-cmake ..
-make
-make install
-cd ../..
-rm -rf input-source-switcher
+rm -rf master
+git clone https://github.com/myshov/xkbswitch-macosx                                                                                                                                                                                                                                                                                        ✔  12:18:33
+cp xkbswitch-macosx/bin/xkbswitch /usr/local/bin
+rm -rf xkbswitch-macosx
+git clone https://github.com/myshov/libxkbswitch-macosx                                                                                                                                                                                                                                                                                        ✔  12:18:33
+cp libxkbswitch-macosx/bin/libxkbswitch.dylib /usr/local/lib
+rm -rf libxkbswitch-macosx
 echo Done
 
 echo Next you need to do:

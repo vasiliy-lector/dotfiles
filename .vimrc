@@ -97,17 +97,21 @@ set showmatch               " Show matching brackets
 set matchpairs+=<:>         " Make < and > match as well
 
 " Localization
-set langmenu=none            " Always use english menu
-" set keymap=russian-jcukenmac " Alternative keymap
-" set langmap=ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,ФA,ЫS,ВD,АF,ПG,РH,ОJ,ЛK,ДL,ЯZ,ЧX,СC,МV,ИB,ТN,ЬM,йq,цw,уe,кr,еt,нy,гu,шi,щo,зp,фa,ыs,вd,аf,пg,рh,оj,лk,дl,яz,чx,сc,мv,иb,тn,ьn,ж\\;,Ж\\:,б\\,ю.,Б\\<,Ю\\>,э\\',Э\\",х\\[,Х\\{,ъ\\],Ъ\\}
+set keymap=russian-jcukenmac " Alternative keymap
+set iminsert=0
+set imsearch=0
 
-set iminsert=0               " English by default
-set imsearch=-1              " Search keymap from insert mode
-" set spell
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.dylib'
+let g:XkbSwitchKeymapNames = {'0' : 'ru', '1': 'us'}
+let g:XkbSwitchAssistNKeymap = 1
+let g:XkbSwitchAssistSKeymap = 1
+
 set encoding=utf-8           " Default encoding
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set termencoding=utf-8
 set fileformats=unix,dos,mac
+set spell spelllang=ru_ru,en_us
 
 " Wildmenu
 set wildmenu                " use wildmenu ...
@@ -175,6 +179,7 @@ let delimitMate_expand_space = 1
 let delimitMate_expand_cr = 1
 
 let g:airline_theme='gruvbox'
+let g:airline_section_a=airline#section#create(['mode'])
 " air-line
 let g:airline_powerline_fonts = 1
 
@@ -358,9 +363,6 @@ endif
 if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)
 endif
-
-let g:XkbSwitchEnabled = 1
-let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline
