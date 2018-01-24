@@ -66,9 +66,6 @@ set undodir=~/tmp/undo//
 set swapfile
 set undofile
 
-" set default cryptmethod
-set cm=blowfish2
-
 " Tab options
 set autoindent              " copy indent from previous line
 set smartindent             " enable nice indent
@@ -107,7 +104,7 @@ set noshowmode
 
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.dylib'
-let g:XkbSwitchKeymapNames = {'0' : 'ru', '1': 'us'}
+let g:XkbSwitchKeymapNames = {'0' : 'us', '1': 'ru'}
 let g:XkbSwitchAssistNKeymap = 1
 let g:XkbSwitchAssistSKeymap = 1
 
@@ -305,8 +302,6 @@ autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRe
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
-nnoremap <f5> :setlocal viminfo=<cr>:X<cr>
-
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 nnoremap <silent> <leader>/ :<C-u>call <SID>SetSearch()<CR>/<C-R>=@/<CR><CR>
@@ -375,6 +370,19 @@ endif
 if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)
 endif
+
+" encryption settings
+set cryptmethod=blowfish2
+autocmd BufReadPre * if system("head -c 9 " . expand("<afile>")) == "VimCrypt~" | call SetupEncryption() | endif
+function! SetupEncryption()
+    setlocal nobackup
+    setlocal nowritebackup
+    setlocal history=0
+    setlocal viminfo=
+    setlocal foldlevel=0
+    setlocal foldclose=all
+endfunction
+
 
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline
