@@ -66,6 +66,9 @@ set undodir=~/tmp/undo//
 set swapfile
 set undofile
 
+" set default cryptmethod
+set cm=blowfish2
+
 " Tab options
 set autoindent              " copy indent from previous line
 set smartindent             " enable nice indent
@@ -301,6 +304,8 @@ autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToRefere
 autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
+
+nnoremap <f5> :setlocal viminfo=<cr>:X<cr>
 
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
