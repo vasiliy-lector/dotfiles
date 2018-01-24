@@ -100,6 +100,7 @@ set matchpairs+=<:>         " Make < and > match as well
 set keymap=russian-jcukenmac " Alternative keymap
 set iminsert=0
 set imsearch=0
+set noshowmode
 
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.dylib'
