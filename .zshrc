@@ -81,22 +81,19 @@ POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM="git_need_upstream"
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM_BACKGROUND="red"
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_EMPTY="echo ' '"
-POWERLEVEL9K_CUSTOM_EMPTY_BACKGROUND="black"
-POWERLEVEL9K_CUSTOM_EMPTY_FOREGROUND="white"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode dir rbenv vcs custom_no_upstream)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time custom_empty)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
 
 source ~/.aliases
 alias -g /='cd /'
-alias -g ..='cd ..'
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
-alias -g .....='cd ../../../..'
-alias -g ......='cd ../../../../..'
+alias -g ..='cd ../'
+alias -g ...='cd ../../'
+alias -g ....='cd ../../../'
+alias -g .....='cd ../../../../'
+alias -g ......='cd ../../../../../'
 
 alias -- -='cd -'
 alias ~='cd ~'
