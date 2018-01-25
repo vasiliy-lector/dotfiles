@@ -283,12 +283,12 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
-nnoremap <silent> <leader>x :S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
-vnoremap <silent> <leader>x :'<,'>S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>
-nnoremap <silent> <leader>* :normal I[ ] <cr>
-vnoremap <silent> <leader>* :'<,'>normal I[ ] <cr>
-nnoremap <silent> <leader>8 :normal I[ ] <cr>
-vnoremap <silent> <leader>8 :'<,'>normal I[ ] <cr>
+nnoremap <silent> <leader>x :S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>$
+vnoremap <silent> <leader>x :'<,'>S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>$
+nnoremap <silent> <leader>* :normal I[ ] <cr>$
+vnoremap <silent> <leader>* :'<,'>normal I[ ] <cr>$
+nnoremap <silent> <leader>8 :normal I[ ] <cr>$
+vnoremap <silent> <leader>8 :'<,'>normal I[ ] <cr>$
 " alternate file
 nnoremap <silent> <leader>a :e #<cr>
 " working with tabs
@@ -402,3 +402,5 @@ hi EndOfBuffer cterm=none ctermfg=bg
 hi TodoEmpty cterm=bold ctermfg=yellow
 hi TodoDone cterm=bold ctermfg=green
 hi TodoUnDone cterm=bold ctermfg=red
+
+source ~/.local.vimrc

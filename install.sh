@@ -34,6 +34,8 @@ cp git-completion.bash ~/git-completion.bash
 cp git-prompt.sh ~/git-prompt.sh
 cp gruvbox_256palette.sh ~/gruvbox_256palette.sh
 
+touch ~/.local.vimrc
+
 source ~/.profile
 
 echo Fetch/update neobundle.vim
