@@ -1,3 +1,5 @@
-syntax match TodoEmpty /^\[ \]/
-syntax match TodoDone /^\[x\]/
-syntax match TodoUnDone /^\[-\]/
+syntax match NoteBullet /^- /
+syntax match NoteBullet /^\* /
+syntax match NoteBullet /^\d*[\.)] /
+syntax match TodoEmpty /- \[ \]/
+syntax match TodoDone /- \[x\]/

@@ -283,12 +283,10 @@ nnoremap <silent> <leader>v :GitGutterPreviewHunk<cr>
 nnoremap <silent> <leader>N :GitGutterNextHunk<cr>
 nnoremap <silent> <leader>P :GitGutterPrevHunk<cr>
 nnoremap <silent> <leader>z :ColorToggle<cr>
-nnoremap <silent> <leader>x :S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>$
+nnoremap <silent> <leader>x :ToggleCheckbox<cr>
 vnoremap <silent> <leader>x :'<,'>S/{[ ],[-],[x]}/{[x],[x],[ ]}<cr>:noh<cr>$
-nnoremap <silent> <leader>* :normal I[ ] <cr>$
-vnoremap <silent> <leader>* :'<,'>normal I[ ] <cr>$
-nnoremap <silent> <leader>8 :normal I[ ] <cr>$
-vnoremap <silent> <leader>8 :'<,'>normal I[ ] <cr>$
+nnoremap <silent> <leader>- :normal I- [ ] <cr>$
+vnoremap <silent> <leader>- :'<,'>normal I- [ ] <cr>$
 " alternate file
 nnoremap <silent> <leader>a :e #<cr>
 " working with tabs
@@ -302,6 +300,15 @@ autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToRefere
 autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
+
+" Bullets.vim
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch',
+    \ 'note',
+    \]
 
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
@@ -401,6 +408,6 @@ hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
 hi TodoEmpty  cterm=bold ctermfg=red
 hi TodoDone cterm=bold ctermfg=green
-hi TodoUnDone cterm=bold ctermfg=grey
+hi NoteBullet cterm=bold ctermfg=blue
 
 source ~/.local.vimrc
