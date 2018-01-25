@@ -399,8 +399,8 @@ hi DiffDelete ctermfg=red ctermbg=red
 hi DiffChange ctermfg=darkblue ctermbg=black
 hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
-hi TodoEmpty cterm=bold ctermfg=yellow
+hi TodoEmpty  cterm=bold ctermfg=red
 hi TodoDone cterm=bold ctermfg=green
-hi TodoUnDone cterm=bold ctermfg=red
+hi TodoUnDone cterm=bold ctermfg=grey
 
 source ~/.local.vimrc
