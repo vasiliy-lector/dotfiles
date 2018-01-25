@@ -171,6 +171,7 @@ let NERDTreeWinSize=42
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMouseMode = 3
+let g:NERDTreeBookmarksSort=0
 " automatically close a tab if the only remaining window is NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
