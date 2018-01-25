@@ -306,9 +306,8 @@ let g:bullets_enabled_file_types = [
     \ 'markdown',
     \ 'text',
     \ 'gitcommit',
-    \ 'scratch',
-    \ 'note',
     \]
+let g:bullets_enable_in_empty_buffers = 1
 
 "Search visual selection by *
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
@@ -406,8 +405,5 @@ hi DiffDelete ctermfg=red ctermbg=red
 hi DiffChange ctermfg=darkblue ctermbg=black
 hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
-hi TodoEmpty  cterm=bold ctermfg=red
-hi TodoDone cterm=bold ctermfg=green
-hi NoteBullet cterm=bold ctermfg=blue
 
 source ~/.local.vimrc
