@@ -384,11 +384,11 @@ let g:markdown_syntax_conceal = 0
 " encryption settings
 set cryptmethod=blowfish2
 au BufRead * if &key!= ""
-    \ | setlocal nobackup history=0 nomodeline noshelltemp nowritebackup secure foldlevel=0 foldclose=all viminfo= noundofile
+    \ | setlocal nobackup history=0 modeline noshelltemp nowritebackup viminfo= noundofile
     \ | endif
 
 au BufWritePost * if &key!= ""
-    \ | setlocal nobackup history=0 nomodeline noshelltemp nowritebackup secure foldlevel=0 foldclose=all viminfo= noundofile
+    \ | setlocal nobackup history=0 modeline noshelltemp nowritebackup viminfo= noundofile
     \ | endif
 
 hi YcmErrorSection cterm=underline
