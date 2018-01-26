@@ -52,6 +52,7 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'mattn/emmet-vim'
 
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'tpope/vim-markdown'
 NeoBundleLazy 'othree/html5.vim', {'autoload': {'filetypes': ['html', 'css']}}
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'chrisyip/Better-CSS-Syntax-for-Vim'

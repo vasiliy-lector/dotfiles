@@ -378,6 +378,9 @@ if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)
 endif
 
+let g:markdown_fenced_languages = ['javascript', 'bash=sh', 'css', 'typescript']
+let g:markdown_syntax_conceal = 0
+
 " encryption settings
 set cryptmethod=blowfish2
 au BufRead * if &key!= ""
