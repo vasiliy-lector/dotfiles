@@ -47,7 +47,7 @@ set wrap
 " execute "set cc=".join(range(121,365), ',')
 
 " Edit
-set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old tex"
+set backspace=indent,start,eol " Allow backspace to remove indents, newlines and old tex"
 set virtualedit=block
 set binary
 set eol
@@ -178,7 +178,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " delimitMate
 let delimitMate_matchpairs = '(:),[:],{:}'
 let delimitMate_expand_space = 1
-let delimitMate_expand_cr = 1
+inoremap {<CR> {<CR>}<C-o>O
+inoremap [<CR> [<CR>]<C-o>O
 
 let g:airline_theme='gruvbox'
 let g:airline_section_a=airline#section#create(['mode'])
@@ -300,6 +301,7 @@ autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToRefere
 autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
+nnoremap gb :ls<CR>:b<Space>
 
 " Bullets.vim
 let g:bullets_enabled_file_types = [
