@@ -175,13 +175,6 @@ let g:NERDTreeBookmarksSort=0
 " automatically close a tab if the only remaining window is NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" delimitMate
-let delimitMate_matchpairs = '(:),[:],{:}'
-let delimitMate_expand_space = 1
-let delimitMate_expand_cr = 1
-" inoremap {<CR> {<CR>}<C-o>O
-" inoremap [<CR> [<CR>]<C-o>O
-
 let g:airline_theme='gruvbox'
 let g:airline_section_a=airline#section#create(['mode'])
 " air-line

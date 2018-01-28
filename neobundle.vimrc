@@ -26,7 +26,6 @@ NeoBundle 'kana/vim-textobj-entire' "ae ie current buffer
 NeoBundle 'glts/vim-textobj-comment' "ac current comment
 NeoBundle 'tpope/vim-abolish' ":%S/{dog,man}/{man,dog}
 NeoBundle 'tomtom/tcomment_vim'
-" NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
@@ -44,7 +43,7 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'Raimondi/delimitMate' " auto close brackets
+NeoBundle 'jiangmiao/auto-pairs' " auto close brackets
 
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
