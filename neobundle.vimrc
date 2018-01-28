@@ -29,6 +29,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'jiangmiao/auto-pairs' " auto close brackets
 NeoBundle 'machakann/vim-highlightedyank'
 
 NeoBundle 'rking/ag.vim'
@@ -43,7 +44,6 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'jiangmiao/auto-pairs' " auto close brackets
 
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
