@@ -178,8 +178,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " delimitMate
 let delimitMate_matchpairs = '(:),[:],{:}'
 let delimitMate_expand_space = 1
-inoremap {<CR> {<CR>}<C-o>O
-inoremap [<CR> [<CR>]<C-o>O
+let delimitMate_expand_cr = 1
+" inoremap {<CR> {<CR>}<C-o>O
+" inoremap [<CR> [<CR>]<C-o>O
 
 let g:airline_theme='gruvbox'
 let g:airline_section_a=airline#section#create(['mode'])
