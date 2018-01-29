@@ -37,11 +37,9 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'mbbill/undotree' " shows all undo tree
 NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'vim-scripts/tlib' " dependency for airline?
 NeoBundle 'bling/vim-airline'
 NeoBundle 'morhetz/gruvbox'
 NeoBundle 'vim-airline/vim-airline-themes'
-" NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
 

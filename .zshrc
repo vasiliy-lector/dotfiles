@@ -18,6 +18,11 @@ bindkey '^p' up-history
 bindkey '^n' down-history
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+bindkey '^[d' kill-word
+bindkey '^k' kill-line
+bindkey '^[.' insert-last-word
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^r' history-incremental-search-backward
