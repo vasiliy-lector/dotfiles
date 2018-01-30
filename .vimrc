@@ -381,6 +381,9 @@ endif
 let g:markdown_fenced_languages = ['javascript', 'bash=sh', 'css', 'typescript']
 let g:markdown_syntax_conceal = 0
 
+" autosave md files on changes
+au TextChanged,InsertLeave *.md if &key=="" | silent update | endif
+
 " encryption settings
 set cryptmethod=blowfish2
 au BufRead * if &key!= ""

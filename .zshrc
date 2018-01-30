@@ -59,6 +59,11 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
+export PATH=./node_modules/.bin:$PATH
+export PATH=~/node_modules/.bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=~/bin:$PATH
+
 source /usr/local/share/antigen/antigen.zsh
 source ~/gruvbox_256palette.sh
 
