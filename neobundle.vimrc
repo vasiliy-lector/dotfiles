@@ -34,6 +34,7 @@ NeoBundle 'machakann/vim-highlightedyank'
 
 NeoBundle 'rking/ag.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'd11wtq/ctrlp_bdelete.vim'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'mbbill/undotree' " shows all undo tree
 NeoBundle 'scrooloose/nerdtree'

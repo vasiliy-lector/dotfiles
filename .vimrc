@@ -248,9 +248,9 @@ nnoremap <leader>h :UndotreeToggle<cr>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR>:GitGutterAll<CR><C-l>
 nnoremap <silent> <C-t> :terminal++close<cr>
 " current open buffers
-nnoremap <silent> <leader>o :CtrlPBuffer<cr>
+nnoremap <silent> gb :CtrlPBuffer<cr>
 " browse oldfiles
-nnoremap <silent> <leader>O :CtrlPMRUFiles<cr>
+nnoremap <silent> <leader>o :CtrlPMRUFiles<cr>
 " NERDTree
 " open and find current file
 nmap <silent> <leader><space> :NERDTreeFind<CR>
@@ -297,7 +297,6 @@ autocmd FileType typescript nnoremap <buffer> <leader>u :YcmCompleter GoToRefere
 autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRename 
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
-nnoremap gb :ls<CR>:b<Space>
 
 " Bullets.vim
 let g:bullets_enabled_file_types = [
@@ -330,6 +329,10 @@ if executable('ag')
 endif
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 let g:ctrlp_switch_buffer = '0'
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_tilde_homedir = 1
+
+call ctrlp_bdelete#init()
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -394,6 +397,8 @@ au BufWritePost * if &key!= ""
     \ | setlocal nobackup history=0 modeline noshelltemp nowritebackup viminfo= noundofile
     \ | endif
 
+source ~/.local.vimrc
+
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline
 hi SpellBad cterm=underline
@@ -411,5 +416,3 @@ hi DiffDelete ctermfg=red ctermbg=red
 hi DiffChange ctermfg=darkblue ctermbg=black
 hi DiffText ctermfg=blue ctermbg=black
 hi EndOfBuffer cterm=none ctermfg=bg
-
-source ~/.local.vimrc
