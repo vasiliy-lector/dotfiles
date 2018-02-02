@@ -1,7 +1,7 @@
 set background=light
-colorscheme solarized
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='light'
+colorscheme solarized
 
 let g:solarized_bold = 1
 let g:solarized_underline = 1
@@ -21,5 +21,6 @@ hi GitGutterChangeDelete cterm=none ctermbg=darkblue
 hi EndOfBuffer cterm=none ctermfg=bg
 hi SignColumn cterm=none ctermbg=7
 hi CursorLineNr cterm=none ctermfg=black ctermbg=7
+
 hi Error cterm=none ctermbg=7
 hi Warning cterm=none ctermbg=7
