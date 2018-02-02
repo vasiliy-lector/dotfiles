@@ -294,6 +294,15 @@ autocmd FileType typescript nnoremap <buffer> <leader>r :YcmCompleter RefactorRe
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>j :YcmCompleter GoToDefinition<cr>
 autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter GetType<cr>
 
+nnoremap <silent> <f5> :call <SID>ToggleBg()<cr>
+function! s:ToggleBg()
+    if &background == 'light'
+        source ~/dotfiles/gruvbox-dark.vimrc
+    else
+        source ~/dotfiles/solarized-light.vimrc
+    endif
+endfunction
+
 " Bullets.vim
 let g:bullets_enabled_file_types = [
     \ 'markdown',
@@ -393,5 +402,4 @@ au BufWritePost * if &key!= ""
     \ | endif
 
 source ~/.local.vimrc
-
-source ~/dotfiles/gruvbox-dark.vimrc
+source ~/dotfiles/solarized-light.vimrc
