@@ -163,9 +163,6 @@ augroup vimrc
 
 augroup END
 
-set background=dark
-colorscheme gruvbox
-
 " NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeShowHidden=1
@@ -177,7 +174,6 @@ let g:NERDTreeBookmarksSort=0
 " automatically close a tab if the only remaining window is NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-let g:airline_theme='gruvbox'
 let g:airline_section_a=airline#section#create(['mode'])
 " air-line
 let g:airline_powerline_fonts = 1
@@ -398,20 +394,4 @@ au BufWritePost * if &key!= ""
 
 source ~/.local.vimrc
 
-hi YcmErrorSection cterm=underline
-hi YcmWarningSection cterm=underline
-hi SpellBad cterm=underline
-hi SpellCap cterm=underline
-hi Visual cterm=none ctermfg=white ctermbg=38
-hi IncSearch cterm=none ctermfg=black ctermbg=220
-hi Search cterm=none ctermfg=white ctermbg=5
-hi MatchParen cterm=none ctermfg=white ctermbg=5
-hi GitGutterAdd cterm=none ctermbg=darkgreen
-hi GitGutterChange cterm=none ctermbg=darkblue
-hi GitGutterChangeDelete cterm=none ctermbg=darkblue
-hi Terminal ctermfg=white ctermbg=black
-hi DiffAdd ctermfg=darkgreen ctermbg=black
-hi DiffDelete ctermfg=red ctermbg=red
-hi DiffChange ctermfg=darkblue ctermbg=black
-hi DiffText ctermfg=blue ctermbg=black
-hi EndOfBuffer cterm=none ctermfg=bg
+source ~/dotfiles/solarized-light.vimrc

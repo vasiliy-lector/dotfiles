@@ -40,6 +40,7 @@ NeoBundle 'mbbill/undotree' " shows all undo tree
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'morhetz/gruvbox'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
