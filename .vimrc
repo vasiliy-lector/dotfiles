@@ -394,4 +394,4 @@ au BufWritePost * if &key!= ""
 
 source ~/.local.vimrc
 
-source ~/dotfiles/solarized-light.vimrc
+source ~/dotfiles/gruvbox-dark.vimrc
