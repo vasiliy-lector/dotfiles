@@ -1,6 +1,11 @@
 set background=light
-let g:airline_theme='solarized'
 colorscheme solarized
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='light'
+
+let g:solarized_bold = 1
+let g:solarized_underline = 1
+let g:solarized_italic = 1
 
 hi YcmErrorSection cterm=underline
 hi YcmWarningSection cterm=underline

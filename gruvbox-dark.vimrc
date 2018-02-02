@@ -14,7 +14,3 @@ hi GitGutterAdd cterm=none ctermbg=darkgreen
 hi GitGutterChange cterm=none ctermbg=darkblue
 hi GitGutterChangeDelete cterm=none ctermbg=darkblue
 hi EndOfBuffer cterm=none ctermfg=bg
-hi clear SignColumn
-hi clear CursorLineNr
-hi clear Error
-hi clear Warning
