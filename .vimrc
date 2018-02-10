@@ -336,7 +336,7 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:30,results:30'
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_tilde_homedir = 1
-let g:ctrlp_open_multiple_files='i'
+let g:ctrlp_open_multiple_files='ijr'
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -401,5 +401,5 @@ au BufWritePost * if &key!= ""
     \ | setlocal nobackup history=0 modeline noshelltemp nowritebackup viminfo= noundofile
     \ | endif
 
-source ~/.local.vimrc
 source ~/dotfiles/solarized-light.vimrc
+source ~/.local.vimrc
