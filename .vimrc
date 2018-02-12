@@ -210,8 +210,9 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.notexists = ''
 
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
 let g:ale_linters = { 'javascript': ['flow', 'eslint'] }
 
 let g:gitgutter_enabled = 1
@@ -297,7 +298,7 @@ autocmd FileType typescript nnoremap <buffer> <silent> <leader>t :YcmCompleter G
 nnoremap <silent> <f5> :call <SID>ToggleBg()<cr>
 function! s:ToggleBg()
     if &background == 'light'
-        source ~/dotfiles/gruvbox-dark.vimrc
+        source ~/dotfiles/solarized-dark.vimrc
     else
         source ~/dotfiles/solarized-light.vimrc
     endif
