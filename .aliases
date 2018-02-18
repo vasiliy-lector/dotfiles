@@ -1,6 +1,6 @@
 alias wm='cd ~/work/wm'
 alias rr='cd ~/work/rr'
-alias rt='cd ~/work/rt'
+alias re='cd ~/work/re'
 
 alias ll='ls -la'
 alias l='ls -l'
