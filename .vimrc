@@ -222,11 +222,11 @@ let g:gitgutter_eager = 1
 set updatetime=250
 set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
-" let g:gitgutter_sign_added = ' '
-" let g:gitgutter_sign_modified = ' '
-" let g:gitgutter_sign_removed = ' _'
-" let g:gitgutter_sign_removed_first_line = ' ‾'
-" let g:gitgutter_sign_modified_removed = ' ‾'
+let g:gitgutter_sign_added = ' '
+let g:gitgutter_sign_modified = ' '
+let g:gitgutter_sign_removed = ' _'
+let g:gitgutter_sign_removed_first_line = ' ‾'
+let g:gitgutter_sign_modified_removed = ' ‾'
 
 let g:move_key_modifier = 'C'
 let g:xml_syntax_folding = 0
