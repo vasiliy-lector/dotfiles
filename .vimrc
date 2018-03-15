@@ -52,6 +52,7 @@ set virtualedit=block
 set binary
 set eol
 set suffixesadd=.js,.ts,.tsx         " to open files without extension (es6 modules, requirejs, etc)
+set path+=$PWD/node_modules
 set timeoutlen=1000
 set ttimeoutlen=0
 
