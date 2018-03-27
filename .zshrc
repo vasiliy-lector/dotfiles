@@ -1,8 +1,5 @@
 DEFAULT_USER=`whoami`
 
-# vi mode
-bindkey -v
-
 zle -N edit-command-line
 # Updates editor information when the keymap changes.
 function zle-keymap-select() {
@@ -12,19 +9,7 @@ function zle-keymap-select() {
 zle -N zle-keymap-select
 autoload -Uz edit-command-line
 bindkey '^f' edit-command-line
-bindkey -M vicmd '^f' edit-command-line
 
-bindkey '^p' up-history
-bindkey '^n' down-history
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^[b' backward-word
-bindkey '^[f' forward-word
-bindkey '^[d' kill-word
-bindkey '^k' kill-line
-bindkey '^a' beginning-of-line
-bindkey '^e' end-of-line
-bindkey '^r' history-incremental-search-backward
 export KEYTIMEOUT=1
 
 # history settings
@@ -89,7 +74,7 @@ POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM="git_need_upstream"
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM_BACKGROUND="red"
 POWERLEVEL9K_CUSTOM_NO_UPSTREAM_FOREGROUND="black"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode dir rbenv background_jobs vcs custom_no_upstream)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv background_jobs vcs custom_no_upstream)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
