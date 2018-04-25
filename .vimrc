@@ -403,5 +403,5 @@ au BufWritePost * if &key!= ""
     \ | setlocal nobackup history=0 modeline noshelltemp nowritebackup viminfo= noundofile
     \ | endif
 
-source ~/dotfiles/solarized-light.vimrc
+source ~/dotfiles/gruvbox-light.vimrc
 source ~/.local.vimrc

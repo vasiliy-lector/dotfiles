@@ -50,7 +50,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/bin:$PATH
 
 source /usr/local/share/antigen/antigen.zsh
-# source ~/gruvbox_256palette.sh
+source ~/gruvbox_256palette.sh
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES=(
