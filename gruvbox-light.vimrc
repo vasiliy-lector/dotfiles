@@ -1,5 +1,5 @@
 set background=light
-let g:airline_theme='tomorrow'
+let g:airline_theme='gruvbox'
 colorscheme gruvbox
 
 hi YcmErrorSection cterm=underline
