@@ -1,0 +1,29 @@
+{
+  "annotator.annotationColumnWidth": "20em",
+  "editor.minimap.showSlider": "always",
+  "git.enableSmartCommit": true,
+  "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "vim.cmdLineInitialColon": true,
+  "vim.hlsearch": true,
+  "vim.substituteGlobalFlag": true,
+  "vim.textwidth": 120,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "workbench.startupEditor": "none",
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors": {
+    "normal": ["#8FBCBB", "#434C5E"],
+    "insert": "#BF616A",
+    "visual": "#B48EAD",
+    "visualline": "#B48EAD",
+    "visualblock": "#A3BE8C",
+    "replace": "#D08770"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#B48EAD",
+    "statusBar.noFolderBackground": "#B48EAD",
+    "statusBar.debuggingBackground": "#B48EAD"
+  }
+}

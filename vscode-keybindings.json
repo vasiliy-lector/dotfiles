@@ -1,0 +1,8 @@
+// Поместите настраиваемые сочетания клавиш в этот файл, чтобы перезаписать клавиши по умолчанию.
+[
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!inQuickOpen && vim.mode != 'Insert'"
+    }
+]
