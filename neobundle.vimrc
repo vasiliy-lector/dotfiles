@@ -41,6 +41,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'morhetz/gruvbox'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasiser/vim-code-dark'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
