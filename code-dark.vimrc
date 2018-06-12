@@ -10,7 +10,8 @@ hi SpellCap cterm=underline
 " hi IncSearch cterm=none ctermfg=black ctermbg=220
 " hi Search cterm=none ctermfg=white ctermbg=5
 " hi MatchParen cterm=none ctermfg=white ctermbg=5
-" hi GitGutterAdd cterm=none ctermbg=darkgreen
-" hi GitGutterChange cterm=none ctermbg=darkblue
-" hi GitGutterChangeDelete cterm=none ctermbg=darkblue
+hi GitGutterAdd cterm=none ctermbg=darkgreen
+hi GitGutterChange cterm=none ctermbg=darkblue
+hi GitGutterChangeDelete cterm=none ctermbg=darkblue
+hi GitGutterDelete cterm=none ctermfg=red
 hi EndOfBuffer cterm=none ctermfg=bg
