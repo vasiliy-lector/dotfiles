@@ -16,9 +16,9 @@ alias gan='git add --intent-to-add .'
 gc() {
     staged=$(git diff --staged --name-only);
     if [[ -z $staged ]]; then
-        git add --all . && git commit -m "$@"
+        git add --all . && git commit -n -m "$@"
     else
-        git commit -m "$@"
+        git commit -n -m "$@"
     fi
 }
 alias gca='git commit --amend'
