@@ -64,7 +64,6 @@ NeoBundle 'HerringtonDarkholme/yats.vim' " yet another typescript
 NeoBundle 'Quramy/vim-js-pretty-template'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'dkarter/bullets.vim'
-NeoBundle 'terryma/vim-smooth-scroll'
 
 NeoBundle 'lyokha/vim-xkbswitch'
 

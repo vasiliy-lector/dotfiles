@@ -28,7 +28,7 @@ set listchars=tab:⇥\ ,trail:·,extends:⋯,precedes:⋯,nbsp:~
 set linebreak               " break lines by words
 set scrolloff=5
 set scrolljump=1
-set sidescroll=12
+set sidescroll=4
 set sidescrolloff=10
 set showcmd
 set whichwrap=b,s,<,>,[,],l,h
@@ -382,11 +382,6 @@ let g:user_emmet_expandabbr_key = '<C-e>'
 "   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " endif
-
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 if !exists('##TextYankPost')
   map y <Plug>(highlightedyank)
