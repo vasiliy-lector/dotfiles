@@ -21,7 +21,7 @@ gc() {
         git commit -n -m "$@"
     fi
 }
-alias gca='git commit --amend'
+alias gca='git commit -n --amend'
 alias gco='git checkout'
 alias grb='git rebase'
 alias gcp='git cherry-pick'
