@@ -17,7 +17,7 @@ NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
-NeoBundle 'sirver/ultisnips' " snippets
+" NeoBundle 'sirver/ultisnips' " snippets
 
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-lastpat' "a/ i/ highlighted text
@@ -43,7 +43,7 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasiser/vim-code-dark'
 NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
+" NeoBundle 'Valloric/YouCompleteMe', {'build' : {'mac': './install.sh', 'unix': './install.sh'}}
 NeoBundle 'lilydjwg/colorizer'
 
 NeoBundle 'pangloss/vim-javascript'

@@ -348,15 +348,15 @@ let g:ycm_semantic_triggers = {
     \   'css': [ 're!^\s{4}', 're!:\s+' ],
     \ }
 
-"ultiSnips
-let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
-let g:UltiSnipsEditSplit="vertical"
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-let g:flow#enable = 0
+" "ultiSnips
+" let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+" let g:UltiSnipsEditSplit="vertical"
+" " better key bindings for UltiSnipsExpandTrigger
+" let g:UltiSnipsExpandTrigger = "<tab>"
+" let g:UltiSnipsJumpForwardTrigger = "<tab>"
+" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"
+" let g:flow#enable = 0
 
 augroup filetypedetect
     au BufRead,BufNewFile *.jsx setfiletype javascript
