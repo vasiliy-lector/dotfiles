@@ -1,18 +1,7 @@
-alias wm='cd ~/work/wm'
-alias rr='cd ~/work/rr'
-alias re='cd ~/work/re'
-
-alias ll='ls -la'
-alias l='ls -l'
-alias la='ls -a'
-
-alias md='mkdir -p'
-
 alias grep='grep --color=auto'
 
 # Git
 alias ga='git add --all'
-alias gan='git add --intent-to-add .'
 gc() {
     staged=$(git diff --staged --name-only);
     if [[ -z $staged ]]; then
@@ -21,15 +10,10 @@ gc() {
         git commit -n -m "$@"
     fi
 }
-alias gca='git commit -n --amend'
-alias gco='git checkout'
-alias grb='git rebase'
-alias gcp='git cherry-pick'
-alias gbr='git branch'
 alias gmr='git merge'
 alias grs='git reset'
+alias gco='git checkout'
 alias gd='git diff'
-alias gdc='git diff --cached'
 alias gds='git diff --staged'
 alias gdpr='git diff `git merge-base ${1:-origin/develop} HEAD`..HEAD'
 alias gf='git fetch --prune'
@@ -38,75 +22,3 @@ alias g9='git lol -9'
 alias gp='git pull'
 alias gpu='git push'
 alias gs='git status'
-alias gst='git stash'
-alias gsts='git stash save'
-gsta() {
-    git stash apply stash@{$1}
-}
-gstp() {
-    git stash pop stash@{$1}
-}
-alias gstl='git stash list'
-gdn() {
-    oldIFS=$IFS;
-    IFS=$'\n';
-    files=(`git diff --name-only`);
-    IFS=$oldIFS;
-    echo "${files[$1 - 1]}";
-}
-alias ga1='git add `gdn 0`';
-alias ga2='git add `gdn 1`';
-alias ga3='git add `gdn 2`';
-alias ga4='git add `gdn 3`';
-alias ga5='git add `gdn 4`';
-alias ga6='git add `gdn 5`';
-alias ga7='git add `gdn 6`';
-alias ga8='git add `gdn 7`';
-alias ga9='git add `gdn 8`';
-
-alias vimg1='vim -p `git diff @~1 --name-only`'
-alias vimg2='vim -p `git diff @~2 --name-only`'
-alias vimg3='vim -p `git diff @~3 --name-only`'
-alias vimg4='vim -p `git diff @~4 --name-only`'
-alias vimg5='vim -p `git diff @~5 --name-only`'
-
-alias vim1='vim `gdn 0`';
-alias vim2='vim `gdn 1`';
-alias vim3='vim `gdn 2`';
-alias vim4='vim `gdn 3`';
-alias vim5='vim `gdn 4`';
-alias vim6='vim `gdn 5`';
-alias vim7='vim `gdn 6`';
-alias vim8='vim `gdn 7`';
-alias vim9='vim `gdn 8`';
-
-# ctags
-alias ct='ctags -R --totals --exclude=node_modules --exclude=mocks'
-
-vimdt() {
-    vim -p `git diff --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimdv() {
-    vim -O `git diff --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimd() {
-    vim `git diff --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimst() {
-    vim -p `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimsv() {
-    vim -O `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vims() {
-    vim `git diff --staged --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimprt() {
-    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -p `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimprv() {
-    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" -O `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
-vimpr() {
-    vim -c ":let g:gitgutter_diff_base = 'origin/develop'" `gdpr --name-status | grep -E '^[AM]' | awk ' {print $2} ' | xargs ls 2>/dev/null`
-}
