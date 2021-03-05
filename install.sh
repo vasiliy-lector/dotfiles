@@ -6,19 +6,19 @@ do
     ln -fs $PWD/$f ~
 done
 
-arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-arch -x86_64 brew install wget
-arch -x86_64 brew install cmake
-arch -x86_64 brew install vim --with-override-system-vi
-arch -x86_64 brew install tmux
-arch -x86_64 brew install reattach-to-user-namespace
-arch -x86_64 brew install ag
-arch -x86_64 brew install ctags
-arch -x86_64 brew install typespeed
-arch -x86_64 brew install git
-arch -x86_64 brew install node
-arch -x86_64 brew install zsh
-arch -x86_64 brew install antigen
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install wget
+brew install cmake
+brew install vim --with-override-system-vi
+brew install tmux
+brew install reattach-to-user-namespace
+brew install ag
+brew install ctags
+brew install typespeed
+brew install git
+brew install node
+brew install zsh
+brew install antigen
 
 npm install -g typescript
 
