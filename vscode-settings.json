@@ -1,29 +1,53 @@
 {
-  "annotator.annotationColumnWidth": "20em",
-  "editor.minimap.showSlider": "always",
-  "git.enableSmartCommit": true,
-  "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "vim.cmdLineInitialColon": true,
-  "vim.hlsearch": true,
-  "vim.substituteGlobalFlag": true,
-  "vim.textwidth": 120,
-  "vim.useSystemClipboard": true,
-  "vim.visualstar": true,
-  "workbench.startupEditor": "none",
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors": {
-    "normal": ["#8FBCBB", "#434C5E"],
-    "insert": "#BF616A",
-    "visual": "#B48EAD",
-    "visualline": "#B48EAD",
-    "visualblock": "#A3BE8C",
-    "replace": "#D08770"
-  },
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#B48EAD",
-    "statusBar.noFolderBackground": "#B48EAD",
-    "statusBar.debuggingBackground": "#B48EAD"
-  }
+  "module-templates.engine": "handlebars",
+  "module-templates.templates": [
+    {
+      "displayName": "Component",
+      "defaultPath": "src/modules",
+      "folder": "{{pascal name}}",
+      "questions": {
+        "name": "Component name"
+      },
+      "files": [
+        {
+          "name": "{{pascal name}}.tsx",
+          "content": [
+            "// import styles from './{{pascal name}}.module.css';",
+            "",
+            "import React from 'react';",
+            "import { create, LocalController } from 'recontroller';",
+            "",
+            "type {{pascal name}}Props = {};" ,
+            "const {{pascal name}}: React.FC<{{pascal name}}Props> = (_props) => {",
+            "    return null;",
+            "};",
+            "",
+            "type {{pascal name}}ControllerProps = {};",
+            "type {{pascal name}}ControllerState = {};",
+            "",
+            "class {{pascal name}}Controller extends LocalController<",
+            "    {{pascal name}}ControllerProps,",
+            "    {{pascal name}}ControllerState,",
+            "    {{pascal name}}Props",
+            "> {",
+            "    state: {{pascal name}}ControllerState = {};",
+            "",
+            "    getProps(",
+            "        _props: {{pascal name}}ControllerProps,",
+            "        _state: {{pascal name}}ControllerState",
+            "    ): {{pascal name}}Props {",
+            "        return {};",
+            "    }",
+            "}",
+            "",
+            "export default create({{pascal name}}Controller)({{pascal name}});"
+          ]
+        },
+        {
+          "name": "{{pascal name}}.module.css",
+          "content": [""]
+        }
+      ]
+    }
+  ]
 }
