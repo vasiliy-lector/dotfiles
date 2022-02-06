@@ -6,6 +6,9 @@ do
     ln -fs $PWD/$f ~
 done
 
+mkdir -p ~/.config/nvim
+ln -fs $PWD/nvim/init.vim ~/.config/nvim/init.vim
+
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install wget
 brew install cmake
@@ -19,6 +22,7 @@ brew install git
 brew install node
 brew install zsh
 brew install antigen
+brew install neovim
 
 npm install -g typescript
 
