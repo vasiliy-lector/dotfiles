@@ -17,25 +17,25 @@
             "import React from 'react';",
             "import { create, LocalController } from 'recontroller';",
             "",
-            "type {{pascal name}}Props = {};" ,
-            "const {{pascal name}}: React.FC<{{pascal name}}Props> = (_props) => {",
+            "type ViewProps = {};",
+            "const {{pascal name}}: React.FC<ViewProps> = (_props) => {",
             "    return null;",
             "};",
             "",
-            "type {{pascal name}}ControllerProps = {};",
-            "type {{pascal name}}ControllerState = {};",
+            "type ControllerProps = {};",
+            "type ControllerState = {};",
             "",
             "class {{pascal name}}Controller extends LocalController<",
-            "    {{pascal name}}ControllerProps,",
-            "    {{pascal name}}ControllerState,",
-            "    {{pascal name}}Props",
+            "    ControllerProps,",
+            "    ControllerState,",
+            "    ViewProps",
             "> {",
-            "    state: {{pascal name}}ControllerState = {};",
+            "    state: ControllerState = {};",
             "",
             "    getProps(",
-            "        _props: {{pascal name}}ControllerProps,",
-            "        _state: {{pascal name}}ControllerState",
-            "    ): {{pascal name}}Props {",
+            "        _props: ControllerProps,",
+            "        _state: ControllerState",
+            "    ): ViewProps {",
             "        return {};",
             "    }",
             "}",
@@ -45,7 +45,9 @@
         },
         {
           "name": "{{pascal name}}.module.css",
-          "content": [""]
+          "content": [
+            ""
+          ]
         }
       ]
     }
