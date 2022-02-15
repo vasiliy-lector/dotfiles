@@ -14,10 +14,11 @@
           "content": [
             "// import styles from './{{pascal name}}.module.css';",
             "",
-            "import React, { FC } from 'react';",
+            "import React from 'react';",
             "",
             "type Props = {};",
-            "const {{pascal name}}: FC<Props> = () => {",
+            "",
+            "const {{pascal name}}: React.FC<Props> = () => {",
             "    return null;",
             "};",
             "",
@@ -35,7 +36,7 @@
     },
     {
       "displayName": "Component",
-      "defaultPath": "src/modules",
+      "defaultPath": "src/components",
       "questions": {
         "name": "Component name"
       },
@@ -43,10 +44,11 @@
         {
           "name": "{{pascal name}}.tsx",
           "content": [
-            "import React, { FC } from 'react';",
+            "import React from 'react';",
             "",
             "type Props = {};",
-            "const {{pascal name}}: FC<Props> = () => {",
+            "",
+            "const {{pascal name}}: React.FC<Props> = () => {",
             "    return null;",
             "};",
             "",
