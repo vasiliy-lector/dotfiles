@@ -91,19 +91,20 @@
             "",
             "    getProps(",
             "        _props: ControllerProps,",
-            "        _state: ControllerState",
+            "        _state: ControllerState,",
             "    ): ViewProps {",
             "        return {};",
             "    }",
             "}",
             "",
-            "export default create({{pascal name}}Controller)({{pascal name}});"
+            "export default create({{pascal name}}Controller)({{pascal name}});",
+            ""
           ]
         },
         {
           "name": "{{pascal name}}.module.css",
           "content": [
-            ""
+            " "
           ]
         }
       ]
