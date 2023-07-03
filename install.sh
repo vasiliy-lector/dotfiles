@@ -6,8 +6,8 @@ do
     ln -fs $PWD/$f ~
 done
 
-mkdir -p ~/.config/nvim
-ln -fs $PWD/nvim/init.vim ~/.config/nvim/init.vim
+mkdir -p ~/.config
+ln -fs $PWD/nvim ~/.config/nvim
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install wget
