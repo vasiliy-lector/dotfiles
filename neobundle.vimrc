@@ -12,8 +12,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Vimproc to asynchronously run commands (NeoBundle, Unite)
 NeoBundle 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak', 'unix': 'make -f make_unix.mak'}}
 
-NeoBundle 'tpope/vim-fugitive'
-NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}}
+" NeoBundle 'tpope/vim-fugitive'
+" NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}}
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
@@ -61,7 +61,7 @@ NeoBundle 'w0rp/ale'
 NeoBundleLazy 'flowtype/vim-flow', {'autoload': {'filetypes': 'javascript'}}
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'HerringtonDarkholme/yats.vim' " yet another typescript
-NeoBundle 'Quramy/vim-js-pretty-template'
+" NeoBundle 'Quramy/vim-js-pretty-template'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'dkarter/bullets.vim'
 
