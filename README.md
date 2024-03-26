@@ -1,5 +1,5 @@
 Bootstrap:
 
 ```bash
-git clone git://github.com/vasiliy-lector/dotfiles ~/dotfiles && ~/dotfiles/install.sh
+git clone git@github.com:vasiliy-lector/dotfiles.git ~/dotfiles && ~/dotfiles/install.sh
 ```
