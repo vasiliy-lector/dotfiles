@@ -49,8 +49,7 @@ export PATH=~/node_modules/.bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/bin:$PATH
 
-source /usr/local/share/antigen/antigen.zsh
-source ~/gruvbox_256palette.sh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES=(
