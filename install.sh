@@ -9,12 +9,6 @@ done
 mkdir -p ~/.config
 ln -fs $PWD/nvim ~/.config/nvim
 
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-# brew install wget
-# brew install antigen
-# brew install neovim
-# brew install n
-
 echo Please input git user name
 read name
 echo Please input git user email
@@ -27,13 +21,7 @@ cp git-completion.bash ~/git-completion.bash
 cp git-prompt.sh ~/git-prompt.sh
 cp gruvbox_256palette.sh ~/gruvbox_256palette.sh
 
-# source ~/.profile
-
 echo Done
-
-# vim-plug for neovim
-# sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-#        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 echo Next you need to do:
 echo "1) To fix repeating keys problem on Mac OS execute: 'defaults write -g ApplePressAndHoldEnabled -bool false'"

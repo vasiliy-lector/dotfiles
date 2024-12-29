@@ -1,6 +1,0 @@
-#!/bin/bash
-# A post checkout hook that update tasks when switching branches
-FILES=$(git diff --name-only $1..$2)
-if [[ $3 = 1 && -n $FILES ]]
-    then echo 'updating tags' && ctags -R --append --totals $FILES
-fi

@@ -1,5 +1,0 @@
-#!/bin/bash
-FILES=$(git diff --name-only HEAD..HEAD~1)
-if [[ -n $FILES ]]
-    then echo 'updating tags' && ctags -R --append --totals $FILES
-fi
